@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Моя компанія — прототип 1.0</title>
+<style>
+:root{--n:#17365d;--g:#548235;--o:#c55a11;--p:#7030a0;--t:#008c95;--b:#2f75b5;--r:#d90000;--bg:#f5f7fb}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:#20242a}
+header{background:var(--n);color:#fff;padding:18px 5%}h1{margin:0;font-size:24px}header small{opacity:.8}
+.goal{margin:16px auto;max-width:1150px;padding:14px;border:2px solid var(--r);border-radius:12px;background:#ffe7e7;color:#9b0000;font-weight:800;text-align:center}
+nav,main{max-width:1150px;margin:auto;padding:0 12px}nav{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+button{cursor:pointer}nav button,.switch button{border:1px solid #d8dee7;background:white;border-radius:10px;padding:12px;font-weight:700}
+nav button.on,.switch button.on{background:var(--n);color:white}.section{display:none}.section.on{display:block}
+.switch{display:flex;gap:8px;margin:18px 0}.owner{max-width:500px;margin:15px auto;background:var(--n);color:#fff;padding:18px;border-radius:14px;text-align:center;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.box,.person,.metric,.placeholder{background:white;border:1px solid #dce2ea;border-radius:12px;overflow:hidden}
+.box h3{margin:0;padding:10px;color:#fff;font-size:14px;text-align:center}.box p{padding:10px;margin:0;font-size:13px;line-height:1.45}
+.sales h3{background:var(--g)}.marketing h3{background:var(--t)}.purchase h3{background:var(--o)}.warehouse h3{background:var(--p)}.finance h3{background:var(--b)}
+.people{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}.person{padding:14px;cursor:pointer}.person b{display:block;color:var(--n);margin-bottom:5px}.person small{color:#6d7682}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}.metric{text-align:center;padding:25px}.metric strong{display:block;font-size:30px;color:var(--n)}.placeholder{padding:35px;text-align:center;margin-top:20px;color:#667}
+.modal{display:none;position:fixed;inset:0;background:#0008;padding:18px;z-index:9}.modal.on{display:flex;align-items:center;justify-content:center}.card{background:#fff;border-radius:16px;padding:22px;width:min(720px,100%);max-height:90vh;overflow:auto}.close{float:right;border:0;background:#eee;border-radius:8px;font-size:22px}.tag{display:inline-block;background:#edf3fa;color:var(--n);padding:5px 8px;border-radius:20px;margin:3px;font-size:12px;font-weight:bold}
+li{margin:6px 0}@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.people{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){nav,.grid,.people,.metrics{grid-template-columns:1fr}}
+</style></head>
+<body>
+<header><h1>МОЯ КОМПАНІЯ</h1><small>Операційна система бізнесу • прототип 1.0</small></header>
+<div class="goal">🔴 НАША ЦІЛЬ: побудувати сильну компанію, яка потребує приблизно 20% нинішньої операційної участі власника, але не втрачає прибуток, а стабільно його збільшує.</div>
+<nav>
+<button class="on" data-s="org">🏢 Оргструктура</button><button data-s="proc">⚙️ Бізнес-процеси</button><button data-s="dash">📊 Панель власника</button><button data-s="mark">📣 Маркетинг</button>
+</nav>
+<main>
+<section id="org" class="section on">
+<div class="switch"><button class="on" data-v="now">ЯК Є</button><button data-v="target">ЯК МАЄ БУТИ</button></div>
+<div id="now">
+<div class="owner" onclick="show('lubnow')"><b>ЛЮБОМИР</b><br>Власник / керівник + значна операційна участь</div>
+<div class="grid">
+<div class="box finance"><h3>УПРАВЛІННЯ</h3><p><b>Любомир</b> — ключові рішення.<br><b>Віра</b> допомагає з поточними питаннями.</p></div>
+<div class="box sales"><h3>ПРОДАЖІ</h3><p><b>Віра</b> — склад, телефон, інтернет, майстри.<br><b>Галя</b> — магазин.</p></div>
+<div class="box purchase"><h3>ЗАКУПІВЛІ</h3><p><b>Любомир</b> — основні.<br><b>Галя</b> — дрібні.</p></div>
+<div class="box warehouse"><h3>СКЛАД / ЛОГІСТИКА</h3><p><b>Любомир</b> — основний виконавець.<br><b>Ростик</b> — допомога.</p></div>
+<div class="box marketing"><h3>МАРКЕТИНГ</h3><p>Частково <b>Віра</b>.<br>Системного відповідального немає.</p></div>
+</div>
+<div class="people">
+<div class="person" onclick="show('vira')"><b>Віра</b><small>Продажі • онлайн • майстри • вікна/двері</small></div>
+<div class="person" onclick="show('halia')"><b>Галя</b><small>Магазин • закупівлі • вікна/двері</small></div>
+<div class="person" onclick="show('rostyk')"><b>Ростик</b><small>Допомога / підміна</small></div>
+<div class="person" onclick="show('wareNow')"><b>Склад зараз</b><small>Значна залежність від Любомира</small></div>
+</div></div>
+
+<div id="target" style="display:none">
+<div class="owner" onclick="show('lubtarget')"><b>ЛЮБОМИР — ВЛАСНИК</b><br>Стратегія • розвиток • фінансовий контроль • ключові рішення</div>
+<div class="grid">
+<div class="box sales"><h3>ПРОДАЖІ</h3><p><b>Віра + Галя</b><br>Чіткі правила продажів, знижок і роботи з клієнтами.</p></div>
+<div class="box marketing"><h3>МАРКЕТИНГ</h3><p>Відповідальний + система: реклама, ліди, майстри, повторні продажі.</p></div>
+<div class="box purchase"><h3>ЗАКУПІВЛІ</h3><p>Поступова передача частини функцій від Любомира за правилами.</p></div>
+<div class="box warehouse"><h3>СКЛАД / ДОСТАВКА</h3><p><b>Працівник складу / комірник-водій</b><br>Основний операційний вузол.</p></div>
+<div class="box finance"><h3>ФІНАНСИ</h3><p><b>Любомир</b> контролює результат, а не виконує всю рутину.</p></div>
+</div>
+<div class="people">
+<div class="person" onclick="show('vira')"><b>Віра</b><small>Продажі • онлайн • майстри • вікна/двері</small></div>
+<div class="person" onclick="show('halia')"><b>Галя</b><small>Магазин • вікна/двері</small></div>
+<div class="person" onclick="show('worker')"><b>Майбутній працівник складу</b><small>Склад • мозаїка • колерування • риштування • доставка</small></div>
+<div class="person" onclick="show('windows')"><b>Автономний напрям</b><small>Вікна / двері — Віра + Галя</small></div>
+</div></div>
+</section>
+
+<section id="proc" class="section"><div class="placeholder"><h2>⚙️ Бізнес-процеси</h2>Наступний модуль: продажі, склад, закупівлі, доставка, колерування, мозаїка та оренда риштування.</div></section>
+<section id="dash" class="section"><div class="metrics"><div class="metric"><strong>—</strong>Чистий прибуток</div><div class="metric"><strong>—</strong>Середній чек</div><div class="metric"><strong>—</strong>Кількість продажів</div></div><div class="placeholder">Після визначення «Точки А» додамо реальні цифри й порівняння по місяцях.</div></section>
+<section id="mark" class="section"><div class="placeholder"><h2>📣 Маркетинг</h2>План маркетингу, реклама, товари-локомотиви, робота з майстрами, акції та результати.</div></section>
+</main>
+
+<div id="modal" class="modal" onclick="if(event.target===this)hide()"><div class="card"><button class="close" onclick="hide()">×</button><h2 id="mt"></h2><div id="tags"></div><div id="mb"></div></div></div>
+<script>
+const D={
+lubnow:["Любомир — зараз",["Власник","Операційна участь"],["Стратегія, ключові рішення та фінансовий контроль","Основні закупівлі й участь у ціноутворенні","Склад: приймання, видача, великі розвантаження","Основна доставка","Мозаїчна штукатурка за каталогом","Колерування фарб, «баранка» та ґрунтовок","Видача й приймання риштування"]],
+lubtarget:["Любомир — цільова роль",["Власник","Стратегія","Розвиток","Контроль"],["Стратегія компанії","Розвиток бізнесу","Фінансовий контроль","Ключові рішення","Контроль результатів","Ключові відносини з постачальниками — за потреби"]],
+vira:["Віра",["Продажі","Онлайн","Майстри","Вікна/двері"],["Продажі зі складу, телефон та інтернет","Робота з майстрами","Внесення приходу товару в програму","Допомога з цінами","Частина Facebook/реклами","Вікна/двері разом з Галею","Підміна Галі"]],
+halia:["Галя",["Магазин","Продажі","Вікна/двері"],["Продажі в магазині","Дрібні закупівлі","Вікна/двері разом з Вірою","Знижки погоджує з Любомиром/Вірою"]],
+rostyk:["Ростик",["Допомога","Підміна"],["Підміна на складі","Допомога з великими розвантаженнями","Іноді допомагає з мозаїчною штукатуркою","Система не повинна залежати від його постійної присутності"]],
+wareNow:["Склад — зараз",["Залежність від власника"],["Приймання та розміщення товару","Видача товару","Розвантаження","Мозаїчна штукатурка","Колерування","Оренда риштування","Основна доставка"]],
+worker:["Працівник складу / комірник-водій",["Майбутня посада","Склад","Доставка"],["Приймання, перевірка й розміщення товару","Видача товару та порядок на складі","Розвантаження","Приготування мозаїчної штукатурки за каталогом","Колерування фарб, «баранка» та ґрунтовок","Видача/приймання риштування та перевірка комплектності","Частина або основний блок доставок","До найму: визначити графік, ставку, змінну оплату, KPI і відповідальність"]],
+windows:["Вікна / двері",["Віра + Галя","Автономний напрям"],["Розрахунок","Продаж","Замовлення на фабрику","Супутні товари"]]
+};
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{document.querySelectorAll("nav button,.section").forEach(x=>x.classList.remove("on"));b.classList.add("on");document.getElementById(b.dataset.s).classList.add("on")});
+document.querySelectorAll(".switch button").forEach(b=>b.onclick=()=>{document.querySelectorAll(".switch button").forEach(x=>x.classList.remove("on"));b.classList.add("on");document.getElementById("now").style.display=b.dataset.v==="now"?"block":"none";document.getElementById("target").style.display=b.dataset.v==="target"?"block":"none"});
+function show(id){let d=D[id];mt.textContent=d[0];tags.innerHTML=d[1].map(x=>'<span class="tag">'+x+'</span>').join("");mb.innerHTML="<ul>"+d[2].map(x=>"<li>"+x+"</li>").join("")+"</ul>";modal.classList.add("on")}
+function hide(){modal.classList.remove("on")}
+</script></body></html>
