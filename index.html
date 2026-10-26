@@ -290,7 +290,114 @@ async function cloudLogout(){
  await cloud.auth.signOut();
  cloudLoginScreen();
 }
+let cloudAutoUser=null;
+let cloudAutoTimer=null;
+let cloudAutoRestoring=false;
+ const CLOUD_AUTO_MARK='myCompanyCloudSync_v1';
+let cloudAutoLast='';
+let cloudAutoBusy=false;
+let cloudAutoStarted=false;
 
+function cloudAutoSnapshot(){
+ return JSON.stringify(cloudData());
+}
+ function cloudAutoSameTime(a,b){
+ return !!a&&!!b&&new Date(a).getTime()===new Date(b).getTime();
+}
+
+function cloudAutoStatus(text){
+ const e=document.getElementById('cloudStatus');
+ if(e)e.textContent=text;
+}
+ async function cloudAutoPull(){
+ if(!cloudAutoUser||cloudAutoBusy)return;
+ cloudAutoBusy=true;
+ try{
+  const r=await cloudRow(cloudAutoUser);
+  if(!r)return;
+  const mark=localStorage.getItem(CLOUD_AUTO_MARK)||'';
+  if(r.updated_at&&!cloudAutoSameTime(r.updated_at,mark)){
+   cloudAutoRestoring=true;
+   cloudRestore(r.data);
+   localStorage.setItem(CLOUD_AUTO_MARK,r.updated_at);
+   cloudAutoLast=cloudAutoSnapshot();
+   location.reload();
+  }
+ }catch(e){
+  cloudAutoStatus('⚠️ Немає зв’язку з хмарою');
+ }finally{
+  cloudAutoBusy=false;
+ }
+  }
+ async function cloudAutoPush(){
+ if(!cloudAutoUser||cloudAutoBusy)return;
+ cloudAutoBusy=true;
+ try{
+  const r=await cloudRow(cloudAutoUser);
+  const mark=localStorage.getItem(CLOUD_AUTO_MARK)||'';
+  if(r&&!cloudAutoSameTime(r.updated_at,mark)){
+   cloudAutoStatus('⚠️ Є нові дані на іншому пристрої');
+   return;
+  }
+  const stamp=new Date().toISOString();
+  const values={data:cloudData(),updated_at:stamp};
+    let result;
+  if(r){
+   result=await cloud.from('company_data')
+    .update(values).eq('user_id',cloudAutoUser.id);
+  }else{
+   result=await cloud.from('company_data')
+    .insert({...values,user_id:cloudAutoUser.id});
+  }
+
+  if(result.error)throw result.error;
+  localStorage.setItem(CLOUD_AUTO_MARK,stamp);
+  cloudAutoLast=cloudAutoSnapshot();
+  cloudAutoStatus('✅ Синхронізовано автоматично');
+ }catch(e){
+  cloudAutoStatus('⚠️ Не вдалося синхронізувати');
+ }finally{
+  cloudAutoBusy=false;
+ }
+}
+ function cloudAutoDetect(){
+ if(!cloudAutoUser||cloudAutoRestoring)return;
+ const now=cloudAutoSnapshot();
+ if(cloudAutoLast&&now!==cloudAutoLast){
+  cloudAutoLast=now;
+  clearTimeout(cloudAutoTimer);
+  cloudAutoTimer=setTimeout(cloudAutoPush,1200);
+ }
+}
+ async function cloudAutoStart(user){
+ if(cloudAutoStarted)return;
+ cloudAutoStarted=true;
+ cloudAutoUser=user;
+ cloudAutoLast=cloudAutoSnapshot();
+ await cloudAutoPull();
+ cloudAutoLast=cloudAutoSnapshot();
+ cloudAutoStatus('🔄 Автосинхронізація увімкнена');
+ setInterval(cloudAutoDetect,1500);
+ setInterval(cloudAutoPull,30000);
+}   
+cloud.auth.getSession().then(({data})=>{
+ if(data.session)cloudAutoStart(data.session.user);
+});
+
+cloud.auth.onAuthStateChange((_event,session)=>{
+ if(session){
+  cloudAutoUser=session.user;
+  if(!cloudAutoStarted)cloudAutoStart(session.user);
+ }else{
+  cloudAutoUser=null;
+ }
+});
+
+window.addEventListener('focus',cloudAutoPull);
+
+document.addEventListener('visibilitychange',()=>{
+ if(!document.hidden)cloudAutoPull();
+});
 (async function(){
  const {data}=await cloud.auth.getSession();
  if(data.session)cloudActions(data.session.user);
