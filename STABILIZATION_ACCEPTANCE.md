@@ -46,7 +46,8 @@ Do not merge this draft PR until the isolated Staff and Market pages are manuall
 - [x] Cancel work without deleting its history; exclude cancelled work from pay.
 - [x] Preserve price-check history; reject invalid prices/dates and cancelled input.
 - [x] 18 automated DOM/storage scenarios passed using jsdom.
-- [ ] Visual browser acceptance. Chromium download failed in the execution environment; the Playwright suite is prepared but has not run.
+- [x] Automated Chromium acceptance: all 17 Playwright scenarios passed on 31 October 2026. Includes downloads/import recovery, stale tabs, malformed data, quota failure, work adjustment/cancellation and price history.
+- [x] Initial Staff and Market screens visually checked at 390 and 1280 px; no horizontal page overflow. Emoji icons were not rendered by the test browser's font set. Owner acceptance remains pending.
 - [ ] Integration into stabilization index.html and eight-section regression.
 
 Tests: `node tests/storage-and-actions.test.cjs` requires jsdom. `node tests/stabilization.test.cjs` requires Playwright with Chromium. Run in a separate test browser profile with synthetic data, not on the working application's origin or personal business data. These isolated pages retain the existing keys and intentionally do not change production or cloud synchronization.
