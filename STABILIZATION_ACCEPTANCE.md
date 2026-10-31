@@ -35,3 +35,20 @@ Restore lost v1.3.6 operational functionality without changing production/main, 
 
 ## Next integration gate
 Do not merge this draft PR until the isolated Staff and Market pages are manually checked in a browser. After acceptance, integrate the two restored modules into the stabilization `index.html`, run the eight-section regression checklist, then merge only with owner approval.
+
+## Follow-up fixes — 31 October 2026
+- [x] Validate stored JSON and supported data structure before allowing writes.
+- [x] Keep malformed stored bytes unchanged and show a blocking explanation.
+- [x] Reject writes from stale pages when another tab has changed the data.
+- [x] Report storage/quota failures without claiming success.
+- [x] Export/import separate Staff and Market backups; validate module/version, confirm replacement, download prior raw bytes before importing.
+- [x] Correct quantity/comment of a work entry with a required reason and before/after audit record.
+- [x] Cancel work without deleting its history; exclude cancelled work from pay.
+- [x] Preserve price-check history; reject invalid prices/dates and cancelled input.
+- [x] 18 automated DOM/storage scenarios passed using jsdom.
+- [ ] Visual browser acceptance. Chromium download failed in the execution environment; the Playwright suite is prepared but has not run.
+- [ ] Integration into stabilization index.html and eight-section regression.
+
+Tests: `node tests/storage-and-actions.test.cjs` requires jsdom. `node tests/stabilization.test.cjs` requires Playwright with Chromium. Run in a separate test browser profile with synthetic data, not on the working application's origin or personal business data. These isolated pages retain the existing keys and intentionally do not change production or cloud synchronization.
+
+Known scope limits: imports replace one module, not the whole company database. Audit history is local and is not tamper-proof or tied to authenticated staff identities. Salary checks cover the tested work adjustments; they do not certify every payroll rule. Future cloud integration must preserve these storage guards rather than bypass them.

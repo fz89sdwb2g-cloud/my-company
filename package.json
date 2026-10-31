@@ -1,0 +1,12 @@
+{
+  "name": "my-company-stabilization-checks",
+  "private": true,
+  "scripts": {
+    "test": "node tests/storage-and-actions.test.cjs",
+    "test:browser": "node tests/stabilization.test.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "30.1.3",
+    "playwright": "1.62.1"
+  }
+}
