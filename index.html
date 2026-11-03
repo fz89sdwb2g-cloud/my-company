@@ -1,12 +1,13 @@
 <!doctype html>
-<html lang="uk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Моя компанія — 1.4.0</title>
+<html lang="uk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Моя компанія — 1.4.3</title>
 <style>
 *{box-sizing:border-box}body{margin:0;font-family:Arial;background:#f5f7fb;color:#20242a}header{background:#17365d;color:white;padding:18px}h1{margin:0}.goal,.box{background:white;border:1px solid #dce2ea;border-radius:12px;padding:14px;margin:12px auto;max-width:1100px}.goal{border:2px solid #d90000;background:#ffe7e7;color:#900;font-weight:bold;text-align:center}nav{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(6,1fr);gap:6px;padding:0 10px}button,.btn{padding:11px;border:1px solid #ccd4df;border-radius:9px;background:white;font-weight:bold;cursor:pointer}nav button.on,.primary{background:#17365d;color:white}.sec,.stafftab{display:none}.sec.on,.stafftab.on{display:block}main{max-width:1100px;margin:auto;padding:0 10px}.tabs{display:flex;gap:6px;flex-wrap:wrap}.tabs button.on{background:#17365d;color:white}.form{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.field label{display:block;font-size:13px;font-weight:bold;margin:5px 0}.field input,.field select,.field textarea{width:100%;padding:10px;border:1px solid #ccd4df;border-radius:8px;font-size:16px}.field textarea{min-height:70px}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.metric{text-align:center;background:white;border:1px solid #dce2ea;border-radius:12px;padding:15px}.metric b{display:block;font-size:24px;color:#17365d;margin:5px}.check{display:flex;gap:8px;padding:9px 0;border-bottom:1px solid #eee}.check input{width:22px;height:22px}.statusrow{padding:10px 0;border-bottom:1px solid #eee}.statusrow b{display:block;margin-bottom:7px}.statusrow select{width:100%;padding:10px;border:1px solid #ccd4df;border-radius:8px;font-size:15px;background:white}.scroll{overflow:auto}table{width:100%;border-collapse:collapse}th,td{padding:8px;border-bottom:1px solid #eee;font-size:13px;text-align:left}.note{font-size:13px;color:#667}.rate{border:1px dashed #98a2b3;border-radius:9px;padding:10px;margin:8px 0}.photos{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.photos img{width:100%;height:100px;object-fit:cover}.hide{display:none}.danger{color:#b42318}.status{padding:5px 8px;border-radius:15px;background:#eef1f5;font-size:12px}.ok{background:#e8f5e9;color:#2e6b32}.partnercard{border:1px solid #dce2ea;border-radius:12px;padding:12px;margin:10px 0;background:#fff}.partnerhead{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.badge{display:inline-block;padding:4px 8px;border-radius:14px;background:#eef1f5;font-size:12px;margin:2px}.badge.green{background:#e8f5e9;color:#2e6b32}.badge.blue{background:#e8f0fe;color:#174ea6}.partneractions{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.small{font-size:12px;color:#667}.summary4{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.summary4>div{background:#f7f9fc;border:1px solid #e1e6ee;border-radius:10px;padding:10px;text-align:center}.summary4 b{display:block;font-size:20px;color:#17365d}.oprow{border-top:1px solid #eee;padding:8px 0}.filterbar{display:grid;grid-template-columns:2fr 1fr 1fr;gap:8px}
 /* organization v2 */.orgv2{background:#fff;border:1px solid #dce2ea;border-radius:12px;padding:16px;margin:12px auto;max-width:1100px}.orgtop{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;align-items:stretch}.orgbrand{background:#17365d;color:#fff;border-radius:10px;padding:15px}.orgbrand h2{margin:0 0 4px}.orgcard{border:2px solid #d6e0ea;border-radius:10px;padding:12px;background:#fff}.orgowner{background:#fff7e7;border-color:#d4a54b}.orgai{background:#f1edff;border-color:#765ad3}.orgassist,.orgpanel{background:#edf7ff;border-color:#6ba8d8}.orgperson{display:flex;gap:9px;align-items:center}.orgavatar{width:52px;height:52px;border-radius:50%;object-fit:cover;background:#e8eef5;display:flex;align-items:center;justify-content:center;font-size:26px}.orgcard p{font-size:12px;line-height:1.45;margin:7px 0}.orgmiddle{display:grid;grid-template-columns:260px 1fr 260px;gap:18px;margin-top:18px;align-items:start}.orgmanagement{min-height:320px;display:flex;flex-direction:column;background:#edf5fb;border-color:#2b608d}.orgmanagement h3{background:#1763a0;color:white;margin:-12px -12px 12px;padding:11px;border-radius:8px 8px 0 0}.orgmanagement .orgopen{margin-top:auto}.orgrolestrip{background:#e4eff9;border-radius:7px;padding:9px;margin:6px 0;font-size:12px;font-weight:bold}.orgdepartments{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:18px}.orgdept{border:1px solid #d6e0ea;border-radius:10px;background:white;overflow:hidden;display:flex;flex-direction:column;min-height:265px}.orgdept h3{color:white;margin:0;padding:10px;font-size:13px;min-height:54px}.orgdept .body{padding:10px;display:flex;flex-direction:column;flex:1}.orgdept.marketing h3{background:#df4050}.orgdept.sales h3{background:#167dcc}.orgdept.warehouse h3{background:#e49318}.orgdept.finance h3{background:#168c52}.orghelper{background:#edf5ff;color:#255f95;border-radius:6px;padding:7px;font-size:11px;font-weight:bold;margin:6px 0}.orgresult{font-size:10px;color:#52697e;border-top:1px solid #e4e9ef;padding-top:7px;margin-top:8px}.orgopen{background:#1763a0;color:white;border:0;border-radius:7px;padding:8px;margin-top:auto}.orgflow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr auto 1fr;gap:5px;align-items:center;margin-top:18px}.orgflow div:nth-child(odd){border:1px solid #d8e2ec;border-radius:7px;background:#f7f9fc;padding:8px;font-size:10px}.orgarrow{font-weight:bold;color:#1763a0}.orgmodal{display:none;position:fixed;inset:0;background:#0c1c2dcc;padding:16px;overflow:auto;z-index:10000}.orgmodal.on{display:block}.orgmodalpanel{max-width:900px;margin:25px auto;background:white;border-radius:12px;padding:20px}.orgclose{float:right}.orgpeople{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.orgrole{border:1px solid #dce2ea;border-radius:9px;padding:12px}.orgckp{background:#eef8f2;border-left:4px solid #168c52;padding:11px;border-radius:7px;margin:12px 0}.orgcabgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.orgcab{background:#f7f9fc;border:1px solid #e0e7ee;border-radius:8px;padding:11px}.auth{display:inline-block;padding:7px 9px;border-radius:7px;margin:3px;font-size:11px}.auth.green{background:#e8f6ee}.auth.yellow{background:#fff5d8}.auth.red{background:#fdecec}.orgpreview{width:105px;height:105px;border-radius:12px;object-fit:cover}
 @media(max-width:700px){nav,.metrics,.form,.summary4,.filterbar,.orgtop,.orgmiddle,.orgdepartments,.orgpeople,.orgcabgrid{grid-template-columns:1fr}.photos{grid-template-columns:repeat(2,1fr)}.orgmanagement{min-height:0}.orgflow{grid-template-columns:1fr}.orgarrow{text-align:center;transform:rotate(90deg)}}
+#market .card{border:1px solid #dce2ea;border-radius:10px;padding:12px;margin:10px 0}#market .row{display:flex;gap:6px;flex-wrap:wrap}#market input{max-width:100%;padding:10px}#market details{overflow-wrap:anywhere}.box{overflow-wrap:anywhere}input,select,textarea{max-width:100%;min-width:0}.orgmiddle{grid-template-columns:minmax(0,260px) minmax(0,1fr) minmax(0,260px)}@media(max-width:800px){.orgmiddle{grid-template-columns:1fr}.orgdepartments{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:500px){.orgdepartments{grid-template-columns:1fr}}
 </style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script></head><body>
-<header><h1>МОЯ КОМПАНІЯ + ШІ</h1><small>Операційна система бізнесу • версія 1.4.0</small></header><div class="goal">🔴 НАША ЦІЛЬ: системна прибуткова компанія, де команда та ШІ виконують максимум операційної роботи, а власник зосереджений на стратегії, ключових рішеннях і розвитку.</div>
-<nav><button class="on" data-s="org">🏢 Оргструктура</button><button data-s="proc">⚙️ Процеси</button><button data-s="dash">📊 Власник</button><button data-s="mark">📣 Маркетинг</button><button data-s="partners">🤝 Партнери</button><button data-s="tasks">📋 Завдання</button><button data-s="market">📈 Аналіз ринку</button><button data-s="staff">👷 Працівники</button></nav><main>
+<header><h1>МОЯ КОМПАНІЯ + ШІ</h1><small>Операційна система бізнесу • версія 1.4.3</small></header><div class="goal">🔴 НАША ЦІЛЬ: системна прибуткова компанія, де команда та ШІ виконують максимум операційної роботи, а власник зосереджений на стратегії, ключових рішеннях і розвитку.</div>
+<div class="box"><button onclick="exportCompanyBackup()">Зберегти повну резервну копію</button></div><nav><button class="on" data-s="org">🏢 Оргструктура</button><button data-s="proc">⚙️ Процеси</button><button data-s="dash">📊 Власник</button><button data-s="mark">📣 Маркетинг</button><button data-s="partners">🤝 Партнери</button><button data-s="tasks">📋 Завдання</button><button data-s="market">📈 Аналіз ринку</button><button data-s="staff">👷 Працівники</button></nav><main>
 <section id="org" class="sec on"><div class="box" id="marketoverview"></div><div class="orgv2"><div class="orgtop"><div class="orgbrand"><h2>МОЯ КОМПАНІЯ + ШІ</h2><b>Організаційна структура v2.1</b><p>Чітка структура. Зрозумілі ролі. Спільна робота людей і AI для стабільного зростання компанії.</p></div><div class="orgcard orgowner"><div class="orgperson"><img id="org-owner-photo" class="orgavatar"><div><b>Любомир</b><br><small>Власник / Стратегія</small></div></div><p>Стратегічні цілі та розвиток<br>Ключові рішення<br>Контроль результатів<br>Розвиток команди та культури</p></div><div class="orgcard orgassist"><div class="orgperson"><span class="orgavatar">🤖</span><div><b>AI-асистент власника</b><br><small>Особистий помічник і радник</small></div></div><p>Працює тільки з власником<br>Підготовка зустрічей і задач<br>Аналіз ринку, трендів, можливостей<br>Підготовка пропозицій та ідей</p></div></div>
 <div class="orgmiddle"><div class="orgcard orgmanagement"><h3>① ⚙ Управління, процеси та розвиток</h3><div class="orgperson"><img id="org-mgmt-photo" class="orgavatar"><div><b>Любомир</b><br><small>Відповідальний / власник</small></div></div><div class="orgrolestrip">🤖 AI-директор</div><div class="orgrolestrip">🤖 AI-асистент</div><div class="orgresult"><b>Кінцевий продукт:</b><br>ефективна, керована та розвиваючася компанія</div><button class="orgopen" onclick="openOrgDept('management')">Відкрити відділ →</button></div><div class="orgcard orgai"><div class="orgperson"><span class="orgavatar">🤖</span><div><b>AI-директор / Chief of Staff</b><br><small>Головний інтелектуальний помічник власника</small></div></div><p>Отримує управлінські цілі та доручення власника<br>Контролює виконання задач і KPI<br>Координує AI-спеціалістів і людей<br>Готує рекомендації та рішення для власника</p></div><div class="orgcard orgpanel"><div class="orgperson"><span class="orgavatar">📊</span><b>Панель власника</b></div><p>Ключові показники<br>Стан компанії<br>Питання та рішення<br>Що вже зроблено<br>Доступ до всіх напрямів</p></div></div>
 <div class="orgdepartments"><div class="orgdept marketing"><h3>② 📣 Маркетинг і розвиток клієнтів</h3><div class="body"><b>Віра</b><small>Відповідальна • маркетинг, онлайн-продажі</small><div class="orghelper">🤖 AI-помічник: AI-маркетолог</div><div class="orgresult">ЦКП: постійний потік нових клієнтів, впізнаваність бренду та ріст продажів</div><button class="orgopen" onclick="openOrgDept('marketing')">Відкрити відділ →</button></div></div><div class="orgdept sales"><h3>③ 🛒 Продажі та клієнти</h3><div class="body"><b>Галя</b><small>Відповідальна • продажі, клієнти</small><div class="orghelper">🤖 AI-помічник: AI-комерційний аналітик</div><div class="orgresult">ЦКП: стабільні продажі, високий рівень обслуговування та збільшення середнього чека</div><button class="orgopen" onclick="openOrgDept('sales')">Відкрити відділ →</button></div></div><div class="orgdept warehouse"><h3>④ 📦 Склад, логістика та закупівлі</h3><div class="body"><b>Любомир</b><small>Тимчасово виконує обов'язки</small><div class="orghelper">🤖 AI-помічники: AI-контролер складу + AI-закупівельник</div><small>Вакансія: комірник / водій / універсал</small><div class="orgresult">ЦКП: потрібний товар у потрібній кількості, його закупівля і доставка</div><button class="orgopen" onclick="openOrgDept('warehouse')">Відкрити відділ →</button></div></div><div class="orgdept finance"><h3>⑤ 💰 Фінанси та облік</h3><div class="body"><b>Любомир</b><small>Тимчасово виконує обов'язки</small><div class="orghelper">🤖 AI-помічник: AI-фінансист</div><div class="orgresult">ЦКП: прозорий фінансовий облік, контроль витрат, прибутковість та фінансова стабільність</div><button class="orgopen" onclick="openOrgDept('finance')">Відкрити відділ →</button></div></div></div>
@@ -14,17 +15,1247 @@
 <section id="proc" class="sec"><div class="box"><h2>⚙️ Бізнес-процеси</h2>Тут поступово зберігатимемо затверджені інструкції та стандарти.</div></section><section id="dash" class="sec"><div class="box"><h2>📊 Панель власника</h2><div class="form"><div class="field"><label>Місяць</label><input id="dm" type="month"></div><div></div><div class="field"><label>Продажі, грн</label><input id="ds" type="number"></div><div class="field"><label>Кількість чеків</label><input id="dc" type="number"></div><div class="field"><label>Чистий прибуток, грн</label><input id="dp" type="number"></div></div><button class="primary" onclick="saveDash()">Зберегти</button></div><div class="metrics"><div class="metric">Чистий прибуток<b id="dpo">—</b></div><div class="metric">Середній чек<b id="dav">—</b></div><div class="metric">Продажів<b id="dco">—</b></div></div></section><section id="mark" class="sec"><div class="box"><h2>📣 Маркетинг</h2><b>ЦКП:</b> стабільний і вимірюваний потік цільових потенційних клієнтів за економічно вигідною вартістю.</div></section>
 <section id="partners" class="sec"><div class="box"><h2>🤝 Партнери → Майстри</h2><p><b>Мета:</b> знати своїх майстрів-партнерів, бачити умови співпраці та історію замовлень.</p></div><div class="box"><h3>🔎 База майстрів</h3><div class="filterbar"><input id="psearch" placeholder="Пошук" oninput="renderPartners()"><select id="pterritory" onchange="renderPartners()"><option value="">Усі території</option></select><select id="pspecfilter" onchange="renderPartners()"><option value="">Усі спеціалізації</option></select></div><div id="partnerlist"></div></div><div class="box"><h3>➕ Додати майстра</h3><div class="form"><div class="field"><label>Ім’я / ПІБ</label><input id="pname"></div><div class="field"><label>Телефон</label><input id="pphone"></div><div class="field"><label>Населений пункт</label><input id="pcity"></div><div class="field"><label>Територія</label><input id="parea"></div><div class="field"><label>Спеціалізація</label><input id="pspec"></div><div class="field"><label>Винагорода</label><select id="prate"><option value="5">5%</option><option value="10">10%</option></select></div><div class="field"><label>Має риштування</label><select id="pscaff"><option value="unknown">Не вказано</option><option value="yes">Так</option><option value="no">Ні</option></select></div><div class="field"><label>Працює з бригадою</label><select id="pteam"><option value="unknown">Не вказано</option><option value="yes">Так</option><option value="no">Ні</option></select></div><div class="field"><label>Примітки</label><textarea id="pnotes"></textarea></div></div><button class="primary" onclick="addPartner()">+ Додати майстра</button></div><div id="partnerdetail"></div></section>
 <section id="tasks" class="sec"><div class="box"><h2>📋 Завдання та дзвінки</h2><form id="taskform" class="form"><div class="field"><label>Кому / клієнт</label><input id="tname" required></div><div class="field"><label>Телефон</label><input id="tphone"></div><div class="field"><label>Населений пункт</label><input id="tplace"></div><div class="field"><label>Дата</label><input id="tdate" type="date" required></div><div class="field"><label>Хто відповідає</label><select id="towner"><option>Любомир</option><option>Галя</option><option>Віра</option></select></div><div class="field"><label>Що зробити</label><textarea id="taction" required></textarea></div><button class="primary" id="tasksubmit">Додати завдання</button></form><p id="tasknotice"></p></div><div class="box"><select id="taskfilter" onchange="renderTasks()"><option value="open">Невиконані</option><option value="today">На сьогодні та прострочені</option><option value="done">Виконані</option><option value="all">Усі</option></select><div id="tasklist"></div></div></section>
-<section id="staff" class="sec"><div class="box"><h2>👷 Завідувач складу, водій</h2><p>Розділ працівника збережено. Посадова інструкція, зміни, виробіток, стандарти та ревізії залишаються в даних програми.</p></div></section><section id="market" class="sec"><div class="box"><h2>📈 Аналіз ринку</h2><p id="marketnotice"></p><button id="competitorsTab" class="primary" onclick="showMarket('competitors')">Конкуренти</button> <button id="manufacturersTab" onclick="showMarket('manufacturers')">Виробники</button></div><div id="marketlist"></div><div class="box"><form id="marketadd" class="form"><select id="marketkind"><option value="competitors">Конкурент</option><option value="manufacturers">Виробник</option></select><input id="marketname" required placeholder="Назва"><input id="marketphone" placeholder="Телефон"><button class="primary">Додати</button></form></div></section></main>
+<section id="staff" class="sec"><div class="box"><h2>👷 Завідувач складу, водій</h2><p>Розділ працівника збережено. Посадова інструкція, зміни, виробіток, стандарти та ревізії залишаються в даних програми.</p></div></section><section id="market" class="sec"><div class="box"><h1>📈 Аналіз ринку</h1><p>Конкуренти, виробники та історія перевірок цін.</p><button data-tab="competitors">Конкуренти</button><button data-tab="manufacturers">Виробники</button></div><div class="box"><h3>Додати</h3><div class="row"><input id="market-name" placeholder="Назва"><input id="market-phone" placeholder="Контакт"><input id="market-notes" placeholder="Примітка"><button id="market-addEntity">Додати</button></div></div><div class="box"><p id="market-storageNotice" role="alert"></p><button id="market-exportMarket">Зберегти резервну копію</button><label>Відновити з копії <input id="market-importMarket" type="file" accept="application/json,.json"></label></div><div class="box"><p>Відновлено записи з архіву від 24.10.2026. Це історичні ціни, їхню актуальність потрібно перевірити.</p><button id="market-restore-archive">Додати відсутні записи з архіву 24.10.2026</button><p id="market-restore-result" role="status"></p></div><div id="market-list" class="box"></div></section></main>
 <div id="orgmodal" class="orgmodal" onclick="if(event.target===this)closeOrgModal()"><div class="orgmodalpanel"><button class="orgclose" onclick="closeOrgModal()">✕ Закрити</button><div id="orgdetail"></div></div></div>
 <script>
-const $=x=>document.getElementById(x),M=v=>Number(v||0).toLocaleString('uk-UA',{maximumFractionDigits:2})+' грн',mon=()=>new Date().toISOString().slice(0,7),day=()=>new Date().toISOString().slice(0,10),K='myCompanyStaff_v13';function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function localDay(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;}
+const $=x=>document.getElementById(x),M=v=>Number(v||0).toLocaleString('uk-UA',{maximumFractionDigits:2})+' грн',mon=()=>localDay().slice(0,7),day=()=>localDay(),K='myCompanyStaff_v13';function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 const ORGKEY='myCompanyOrgRoles_v2';const ORGBASE={owner:{name:'Любомир',title:'Власник / Стратегія',desc:'Стратегічні цілі, ключові рішення, розвиток і контроль результатів.',photo:''},director:{name:'AI-директор',title:'Chief of Staff',desc:'Координує виконання цілей власника, людей та AI-спеціалістів.',photo:''},assistant:{name:'AI-асистент власника',title:'Особистий помічник і радник',desc:'Працює тільки з власником.',photo:''},vira:{name:'Віра',title:'Маркетинг / онлайн-продажі',desc:'Маркетинг, онлайн-продажі та робота з майстрами.',photo:''},halya:{name:'Галя',title:'Продажі та клієнти',desc:'Продажі й обслуговування клієнтів.',photo:''},vacancy:{name:'Вакантна посада',title:'Комірник / водій / універсал',desc:'Склад, доставка, приймання та видача товару.',photo:''},ai_marketer:{name:'AI-маркетолог',title:'AI-помічник',desc:'Маркетингова аналітика та підтримка.',photo:''},ai_commercial:{name:'AI-комерційний аналітик',title:'AI-помічник',desc:'Комерційна аналітика.',photo:''},ai_warehouse:{name:'AI-контролер складу',title:'AI-помічник',desc:'Контроль складу.',photo:''},ai_purchase:{name:'AI-закупівельник',title:'AI-помічник',desc:'Закупівельна аналітика.',photo:''},ai_finance:{name:'AI-фінансист',title:'AI-помічник',desc:'Фінансова аналітика.',photo:''}};const ORGDEPTS={management:{t:'① Управління, процеси та розвиток',c:'Ефективна, керована та розвиваючася компанія.',p:['owner','director','assistant'],g:['Стратегія і цілі','Оргструктура','Процеси та стандарти','Команда','Розвиток','Контроль виконання']},marketing:{t:'② Маркетинг і розвиток клієнтів',c:'Постійний потік нових клієнтів, впізнаваність бренду та ріст продажів.',p:['vira','ai_marketer'],g:['Реклама','Контент','Соцмережі','Бренд','Ліди','Аналітика']},sales:{t:'③ Продажі та клієнти',c:'Стабільні продажі, високий рівень обслуговування клієнтів та збільшення середнього чека.',p:['halya','vira','ai_commercial'],g:['Продажі','Клієнти','Майстри','Сервіс','Дебіторка','Аналітика']},warehouse:{t:'④ Склад, логістика та закупівлі',c:'Наявність потрібного товару в потрібній кількості, його закупівля і доставка.',p:['owner','vacancy','ai_warehouse','ai_purchase'],g:['Залишки','Приймання і видача','Доставка','Поповнення','Закупівлі','Постачальники','Інвентаризація']},finance:{t:'⑤ Фінанси та облік',c:'Прозорий фінансовий облік, контроль витрат, прибутковість та фінансова стабільність.',p:['owner','vira','halya','ai_finance'],g:['Каса','Платежі','Витрати','Дебіторка','Прибутковість','Звітність']}};let OR={};try{OR=JSON.parse(localStorage.getItem(ORGKEY)||'{}')}catch(e){}function orgRole(id){return Object.assign({},ORGBASE[id],OR[id]||{})}function orgPh(id){return 'data:image/svg+xml;charset=UTF-8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120"><rect width="120" height="120" rx="60" fill="#e8eef5"/><text x="60" y="75" text-anchor="middle" font-size="48">'+(id.startsWith('ai_')||id==='director'||id==='assistant'?'🤖':'👤')+'</text></svg>')}function paintOrg(){let o=orgRole('owner');$('org-owner-photo').src=o.photo||orgPh('owner');$('org-mgmt-photo').src=o.photo||orgPh('owner')}function openOrgDept(k){let d=ORGDEPTS[k];$('orgdetail').innerHTML=`<h1>${d.t}</h1><div class="orgckp"><b>Кінцевий продукт</b><br>${d.c}</div><h3>Люди та AI</h3><div class="orgpeople">${d.p.map(id=>{let x=orgRole(id);return `<div class="orgrole"><div class="orgperson"><img class="orgavatar" src="${x.photo||orgPh(id)}"><div><b>${esc(x.name)}</b><br><small>${esc(x.title)}</small></div></div><p>${esc(x.desc)}</p><button onclick="openOrgCabinet('${id}')">Відкрити кабінет →</button></div>`}).join('')}</div><h3>Групи відповідальності</h3><p>${d.g.map(x=>`<span class="badge">${x}</span>`).join(' ')}</p>`;$('orgmodal').classList.add('on')}function openOrgCabinet(id){let x=orgRole(id);$('orgdetail').innerHTML=`<div class="orgperson"><img class="orgavatar" src="${x.photo||orgPh(id)}"><div><h1>${esc(x.name)}</h1><b>${esc(x.title)}</b></div></div><p>${esc(x.desc)}</p><div class="orgcabgrid"><div class="orgcab"><b>🎯 ЦКП ролі</b></div><div class="orgcab"><b>📊 KPI</b></div><div class="orgcab"><b>🔁 Регулярні задачі</b></div><div class="orgcab"><b>📘 Інструкції та правила</b></div></div><h3>Повноваження</h3><span class="auth green">🟢 самостійно</span><span class="auth yellow">🟡 після погодження</span><span class="auth red">🔴 рішення власника</span><br><button style="margin-top:12px" onclick="editOrgRole('${id}')">✏️ Редагувати роль</button>`}function editOrgRole(id){let x=orgRole(id);$('orgdetail').innerHTML=`<h2>✏️ Редагувати роль</h2><img id="orgpreview" class="orgpreview" src="${x.photo||orgPh(id)}"><div class="field"><label>Ім’я / назва ролі</label><input id="orname" value="${esc(x.name)}"></div><div class="field"><label>Посада / роль</label><input id="ortitle" value="${esc(x.title)}"></div><div class="field"><label>Опис</label><textarea id="ordesc">${esc(x.desc)}</textarea></div><div class="field"><label>Фотографія</label><input id="orphoto" type="file" accept="image/*" onchange="previewOrgPhoto(this)"></div><button class="primary" onclick="saveOrgRole('${id}')">💾 Зберегти</button>`}function previewOrgPhoto(inp){let f=inp.files&&inp.files[0];if(!f)return;let r=new FileReader();r.onload=e=>$('orgpreview').src=e.target.result;r.readAsDataURL(f)}function saveOrgRole(id){let x=orgRole(id),f=$('orphoto').files[0];x.name=$('orname').value.trim()||x.name;x.title=$('ortitle').value.trim();x.desc=$('ordesc').value.trim();let done=()=>{OR[id]=x;localStorage.setItem(ORGKEY,JSON.stringify(OR));paintOrg();openOrgCabinet(id)};if(f){let r=new FileReader();r.onload=e=>{x.photo=e.target.result;done()};r.readAsDataURL(f)}else done()}function closeOrgModal(){$('orgmodal').classList.remove('on')}paintOrg();
 /* Existing operational data remain under their original localStorage keys. */
 let S;try{S=JSON.parse(localStorage.getItem(K))||{}}catch(e){S={}}const PK='myCompanyPartners_v1';let P;try{P=JSON.parse(localStorage.getItem(PK))||[]}catch(e){P=[]}function saveP(){localStorage.setItem(PK,JSON.stringify(P))}function yn(v){return v==='yes'?'Так':v==='no'?'Ні':'Не вказано'}function addPartner(){let n=$('pname').value.trim(),ph=$('pphone').value.trim();if(!n||!ph)return alert('Вкажіть ім’я та телефон');P.push({id:'p'+Date.now(),name:n,phone:ph,city:$('pcity').value.trim(),area:$('parea').value.trim(),spec:$('pspec').value.trim(),rate:+$('prate').value,scaff:$('pscaff').value,team:$('pteam').value,notes:$('pnotes').value.trim(),ops:[]});saveP();renderPartners()}function renderPartners(){if(!$('partnerlist'))return;$('partnerlist').innerHTML=P.length?P.map(p=>`<div class="partnercard"><b>${esc(p.name)}</b><br>${esc(p.phone)} • ${esc(p.city||'')}<br><span class="badge">${esc(p.spec||'')}</span> <span class="badge">${p.rate}%</span></div>`).join(''):'<p class="note">Майстрів ще не додано.</p>'}renderPartners();
 const TK='myCompanyTasks_v1';let T=[];try{T=JSON.parse(localStorage.getItem(TK)||'[]')}catch(e){}function renderTasks(){if(!$('tasklist'))return;let f=$('taskfilter').value,today=day(),a=T.filter(t=>f==='all'||(f==='done'?t.done:f==='today'?!t.done&&t.date<=today:!t.done));$('tasklist').innerHTML=a.map(t=>`<div class="partnercard"><b>${esc(t.name)}</b><p>${esc(t.action)}</p><small>${esc(t.date)} • ${esc(t.owner)}</small></div>`).join('')||'<p class="note">Завдань немає.</p>'}$('taskform').onsubmit=e=>{e.preventDefault();T.push({id:'t'+Date.now(),name:$('tname').value.trim(),phone:$('tphone').value.trim(),place:$('tplace').value.trim(),date:$('tdate').value,owner:$('towner').value,action:$('taction').value.trim(),done:false});localStorage.setItem(TK,JSON.stringify(T));e.target.reset();renderTasks()};renderTasks();
 function dash(){let a={};try{a=JSON.parse(localStorage.getItem('myCompanyMonthly_v1')||'{}')}catch(e){}let d=a[$('dm').value]||{},av=d.checks?d.sales/d.checks:null;$('dpo').textContent=d.profit==null?'—':M(d.profit);$('dav').textContent=av==null?'—':M(av);$('dco').textContent=d.checks??'—'}function saveDash(){let a={};try{a=JSON.parse(localStorage.getItem('myCompanyMonthly_v1')||'{}')}catch(e){}a[$('dm').value]={sales:+$('ds').value,checks:+$('dc').value,profit:$('dp').value===''?null:+$('dp').value};localStorage.setItem('myCompanyMonthly_v1',JSON.stringify(a));dash()}$('dm').value=mon();$('dm').onchange=dash;dash();
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('nav button').forEach(x=>x.classList.remove('on'));document.querySelectorAll('.sec').forEach(x=>x.classList.remove('on'));b.classList.add('on');$(b.dataset.s).classList.add('on')});
-/* Market data are intentionally not overwritten; full market module remains stored in myCompanyMarket_v1. */function showMarket(){let raw=localStorage.getItem('myCompanyMarket_v1');$('marketnotice').textContent=raw?'Дані аналізу ринку збережені.':'Даних ще немає.';$('marketlist').innerHTML='<div class="box"><p>Модуль аналізу ринку збережено в даних програми. Повний інтерфейс буде відновлено в наступному технічному оновленні.</p></div>'}showMarket();
+
+</script><script>
+/* Employee module restored from the verified v1.3.6 reference. */
+(() => {
+  const root = document.getElementById("staff");
+  if (!root) throw new Error("Employee module container #staff was not found.");
+
+  root.innerHTML = `
+    <div class="box">
+      <h2>👷 Завідувач складу, водій</h2>
+      <p>Завідувач складу, водій — відповідає за правильне приймання, розміщення, зберігання та підготовку товару, навантаження і розвантаження, видачу товару клієнтам, порядок на складі, правильність залишків та своєчасну доставку товару клієнтам.</p>
+      <p><b>ЦКП:</b> Товар правильно прийнятий, розміщений, збережений, підготовлений, завантажений і вчасно доставлений клієнту; на складі підтримується порядок і правильні залишки товару.</p>
+      <div class="tabs" aria-label="Розділи працівника">
+        <button type="button" class="on" data-t="staff-shift">🕒 Зміна</button>
+        <button type="button" data-t="staff-work">🧾 Виробіток</button>
+        <button type="button" data-t="staff-standard">✅ Стандарт</button>
+        <button type="button" data-t="staff-revision">📋 Ревізія</button>
+        <button type="button" data-t="staff-instruction">📘 Інструкція</button>
+        <button type="button" data-t="staff-settings">⚙️ Налаштування</button>
+      </div>
+    </div>
+    <div id="staffnotice" class="box" role="status" hidden></div>
+    <div id="staff-shift" class="stafftab on">
+      <div class="metrics">
+        <div class="metric">База за повний місяць<b id="staff-baseview">—</b></div>
+        <div class="metric">Відпрацьовано<b id="staff-hoursview">—</b><span id="staff-planview" class="note"></span></div>
+        <div class="metric">Попередньо нараховано<b id="staff-salaryview">—</b><span class="note">час + виробіток</span></div>
+      </div>
+      <div class="box">
+        <h3>Робоча зміна</h3>
+        <p><b>Пн–Пт, 08:00–17:00.</b> Обід — у зручний час, окремо не фіксується.</p>
+        <div id="staff-shiftstate"></div>
+        <button type="button" id="staff-start" class="primary" onclick="startStaffShift()">▶️ Почати зміну</button>
+        <button type="button" id="staff-end" class="danger hide" onclick="endStaffShift()">⏹ Закінчити зміну</button>
+        <p class="note">Фактичний час рахується автоматично. Запізнення/відсутність не оплачуються. Час після 17:00 — за тією ж погодинною ставкою.</p>
+      </div>
+      <div class="box">
+        <h3>Історія змін</h3>
+        <div class="scroll"><table><thead><tr><th>Дата</th><th>Початок</th><th>Завершення</th><th>Тривалість</th></tr></thead><tbody id="staff-shiftlog"></tbody></table></div>
+      </div>
+    </div>
+    <div id="staff-work" class="stafftab">
+      <div class="box">
+        <h3>+ Виконана робота</h3>
+        <div class="form">
+          <div class="field"><label for="staff-wt">Вид роботи</label><select id="staff-wt" onchange="calculateStaffWork()"></select></div>
+          <div class="field"><label id="staff-ql" for="staff-wq">Кількість</label><input id="staff-wq" type="number" min="0" step=".01" oninput="calculateStaffWork()"></div>
+          <div class="field"><label for="staff-wc">Коментар / чек / клієнт</label><input id="staff-wc" placeholder="Напр. чек №154"></div>
+          <div class="field"><label>Нараховано</label><b id="staff-wcalc">0 грн</b></div>
+        </div>
+        <button type="button" class="primary" onclick="addStaffWork()">Зберегти роботу</button>
+      </div>
+      <div class="box">
+        <h3>Журнал робіт</h3>
+        <div class="scroll"><table><thead><tr><th>Дата</th><th>Робота</th><th>К-сть</th><th>Сума</th><th>Коментар</th><th>Дії</th></tr></thead><tbody id="staff-worklog"></tbody></table></div>
+      </div>
+    </div>
+    <div id="staff-standard" class="stafftab">
+      <div class="box">
+        <h3>Щоденний стандарт — входить у базову оплату</h3>
+        <div id="staff-checks"></div>
+        <div class="field"><label for="staff-stdcomment">Коментар / проблема</label><textarea id="staff-stdcomment"></textarea></div>
+        <button id="staff-save-standard" type="button" class="primary" onclick="saveStaffStandard()">Зберегти чек-лист за сьогодні</button><p id="staff-standard-result" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+    <div id="staff-revision" class="stafftab">
+      <div class="box">
+        <h3>📋 Щомісячна ревізія</h3>
+        <p>Мінімум раз на місяць, в останній тиждень. Входить у базову оплату.</p>
+        <div id="staff-revchecks"></div>
+        <div class="field"><label for="staff-revnote">Розбіжності / пошкодження / прострочений товар / товар із коротким строком</label><textarea id="staff-revnote"></textarea></div>
+        <div class="field"><label for="staff-revphotos">Фотозвіт складу — 3–4 фото (до 4 файлів)</label><input id="staff-revphotos" type="file" accept="image/*" multiple onchange="previewStaffPhotos(this)"><div id="staff-photopreview" class="photos"></div></div>
+        <button type="button" class="primary" onclick="saveStaffRevision()">Завершити ревізію</button>
+        <div id="staff-revhistory"></div>
+      </div>
+    </div>
+    <div id="staff-instruction" class="stafftab">
+      <div class="box"><h3>📘 Посадова інструкція</h3><p><b>Посада:</b> Завідувач складу, водій</p><p><b>ЦКП:</b> Товар правильно прийнятий, розміщений, збережений, підготовлений, завантажений і вчасно доставлений клієнту; на складі підтримується порядок і правильні залишки товару.</p></div>
+      <div class="box"><h3>1. Приймання товару</h3><p>Приймати товар постачальника згідно з накладною: звіряти назву/вид товару, кількість і стан. Виявляти нестачі, надлишки, пересорт і пошкодження та одразу повідомляти відповідального і погоджувати вирішення.</p><p><b>Правило:</b> Водій постачальника має залишатися на місці до завершення перевірки товару та, у разі виявлення розбіжностей, до погодження способу їх вирішення.</p><p>Після приймання одразу передати накладну відповідальному за товарний облік (зараз — Віра) для внесення товару, кількості та закупівельної ціни в облікову програму. Якщо постачальнику передаються готівкові кошти, на накладній, що залишається в компанії, мають бути сума, дата, ПІБ і підпис особи, яка отримала гроші.</p></div>
+      <div class="box"><h3>2. Розміщення та зберігання</h3><p>Розміщувати прийнятий товар у визначеному місці; зберігати так, щоб не допустити пошкодження, намокання, забруднення чи псування; підтримувати порядок і вільний доступ. Пошкоджений або проблемний товар відокремлювати від придатного до продажу та повідомляти відповідального.</p><p><b>Головне правило:</b> Кожен вид товару має своє визначене місце зберігання.</p><p><b>Піддони та вторсировина:</b> порожні піддони складати у визначеному місці та періодично продавати; використану плівку збирати й пакувати в мішки, картон — збирати компактно. Кошти від продажу піддонів і вторсировини здавати в касу компанії та повідомляти суму відповідальному за фінансовий/касовий облік.</p></div>
+      <div class="box"><h3>3. Підготовка та видача товару клієнту</h3><p>Отримати чек, накладну або інший офіційний документ на видачу; підготувати товар; звірити назву і кількість із документом; видати правильний товар у правильній кількості та за потреби допомогти із завантаженням. Про пошкодження, відсутність або розбіжність залишків одразу повідомляти відповідального.</p><p><b>Правило:</b> Товар видається на підставі офіційного документа. Завідувач складу не вирішує самостійно питання оплати або відпуску в борг.</p></div>
+      <div class="box"><h3>4. Доставка товару</h3><p>Завдання на доставку надходить від відповідального менеджера з продажу (зараз — Галя або Віра) у робочій Viber-групі, зазвичай разом із чеком/накладною, адресою і телефоном клієнта. Перед завантаженням і виїздом зателефонувати клієнту, підтвердити готовність прийняти товар, за потреби уточнити суму оплати та організацію розвантаження.</p><p>Перед завантаженням звірити товар і кількість із документом, правильно завантажити та захистити товар. Під час розвантаження разом із клієнтом перерахувати й перевірити товар; залишатися до завершення перевірки. Про нестачу, пошкодження або іншу розбіжність негайно повідомити відповідального менеджера.</p><p>Якщо отримана оплата — після повернення здати гроші в касу. Після доставки повідомити у Viber-групі номер чека/накладної та статус доставки; якщо отримана оплата — суму і факт здачі грошей у касу.</p></div>
+      <div class="box"><h3>5. Ревізія та контроль залишків</h3><p>Не рідше одного разу на місяць, в останній тиждень місяця, провести фізичний перерахунок товару та звірити його з обліковою програмою. Зафіксувати нестачі, надлишки, пересорт, пошкодження, прострочений товар і товар, строк придатності якого скоро закінчується. Після ревізії зробити 3–4 фото складу.</p><p>При розбіжностях не змінювати залишки в програмі самостійно — зафіксувати їх і передати відповідальному за товарний облік (зараз — Віра) для перевірки.</p></div>
+      <div class="box"><h3>6. Технічні роботи та оренда риштування</h3><p>Виконувати колерування фарби, декоративної штукатурки «баранка» та кварцової ґрунтовки; готувати мозаїчну штукатурку за каталогом/рецептурою; після роботи очищати міксер і робочу зону; виконувати дрібні господарські та прості ремонтні роботи, пов’язані зі складом, обладнанням і риштуванням.</p><p><b>Перед кожним колеруванням:</b> перевіряти рівні колорантів у ємностях колерувальної машини, за потреби доливати; завчасно повідомляти відповідального за закупівлі про необхідність поповнення запасу. Не починати колерування без перевірки потрібних колорантів.</p><p><b>Викраска:</b> після колерування фарби або «баранки» зробити викраску, підписати щонайменше номером чека, бажано також номером/кодом кольору, та зберегти у визначеному місці. Колерування вважається завершеним тільки після того, як зроблена, підписана та збережена викраска.</p><p><b>Риштування:</b> при видачі заповнити документ із датою, видом і кількістю елементів. При поверненні за тим самим документом перерахувати комплектність і перевірити стан, визначити кількість днів оренди та суму оплати. Отриману оплату здати в касу, а в документі зафіксувати дату повернення, кількість днів і суму. Пошкоджені елементи відокремити; дрібні пошкодження відремонтувати перед поверненням у доступний запас, про серйозні — повідомити відповідального та погодити компенсацію з орендарем до повного закриття оренди.</p></div>
+      <div class="box"><h3>7. Автомобіль і заправка</h3><p>Підтримувати базовий технічний стан, чистоту й порядок автомобіля та вантажного відсіку. Не перевантажувати автомобіль понад дозволену вантажопідйомність. Не рідше одного разу на місяць і перед довшими поїздками перевіряти рівень моторної оливи та охолоджувальної рідини. Про несправності, сигнальні лампи й незвичні шуми повідомляти відповідального; не продовжувати рух, якщо несправність створює ризик ДТП або серйозної поломки.</p><p><b>Заправка:</b> перед заправкою отримати необхідні кошти з каси; після заправки обов’язково взяти фіскальний чек, повідомити кількість літрів і суму та передати чек/фото відповідальному за облік витрат (зараз — Віра). Невикористані кошти повернути в касу.</p></div>
+      <div class="box"><h3>8. Відповідальність</h3><p>Не приховувати помилки, нестачі, пошкодження та інші проблеми; одразу повідомляти відповідального. Якщо завдання неможливо виконати правильно або вчасно — попередити завчасно. Не приймати рішення поза межами своїх повноважень.</p><p><b>Головне правило:</b> Проблему виявив → повідомив → допоміг вирішити.</p></div>
+      <div class="box"><h3>💰 Система оплати</h3><p><b>Зарплата = базова оплата за виконання стандарту + відрядна оплата за виконані операції.</b></p><p>Робоча базова ставка: <b>15 000 грн/місяць</b> за дотримання стандарту посади. Відрядна частина нараховується лише за правильно виконану та зафіксовану роботу. Актуальні тарифи власник може змінювати у вкладці «⚙️ Налаштування».</p></div>
+    </div>
+    <div id="staff-settings" class="stafftab">
+      <div class="box"><h3>⚙️ Оплата — редагує власник</h3><div class="field"><label for="staff-baseinput">Базова оплата за повний місяць, грн</label><input id="staff-baseinput" type="number" min="0" step=".01"></div><button type="button" class="primary" onclick="saveStaffBase()">Зберегти базу</button></div>
+      <div class="box"><h3>Тарифи виробітку</h3><div id="staff-rates"></div><h4>Додати нову роботу</h4><div class="form"><div class="field"><label for="staff-newname">Назва</label><input id="staff-newname"></div><div class="field"><label for="staff-newrate">Тариф, грн</label><input id="staff-newrate" type="number" min="0" step=".01"></div><div class="field"><label for="staff-newunit">Одиниця</label><input id="staff-newunit" placeholder="шт., відро, км"></div></div><button type="button" class="primary" onclick="addStaffRate()">+ Додати</button></div>
+      <div class="box"><h3>Резервна копія даних працівника</h3><p class="note">Експорт та імпорт стосуються лише модуля «Працівники». Інші розділи не змінюються.</p><button type="button" onclick="exportStaffData()">⬇️ Експорт даних</button> <label class="btn" style="display:inline-block;cursor:pointer">⬆️ Відновити з копії<input class="hide" type="file" accept="application/json,.json" onchange="importStaffData(this)"></label></div>
+    </div>`;
+
+  const STAFF_KEY = K;
+  const staffRatesDefault = [
+    ["Колерування «баранка»", 40, "відро"],
+    ["Колерування фарби", 40, "відро"],
+    ["Колерування кварцової ґрунтовки", 40, "відро"],
+    ["Приготування мозаїчної штукатурки", 50, "відро"],
+    ["Доставка — робота водієм", 4, "км"],
+    ["Видача риштування + бланк", 100, "видача"],
+    ["Приймання, перерахунок і складання риштування", 100, "приймання"],
+    ["Приймання / розвантаження звичайного товару", 2, "од."],
+    ["Завантаження / видача звичайного товару", 2, "од."],
+    ["Завантаження або розвантаження вікна", 30, "шт."],
+    ["Завантаження або розвантаження дверей", 50, "шт."]
+  ];
+  const staffChecks = [
+    "Склад прибраний",
+    "Товар стоїть на визначених місцях",
+    "Проходи вільні",
+    "Робоча зона чиста",
+    "Сміття прибране",
+    "Пошкоджений товар не прихований і виставлений на визначене місце; прострочений та завислий товар — кожен на своєму визначеному місці; про проблеми повідомлено відповідального",
+    "Автомобіль у належному стані; несправності повідомлені",
+    "Вода для миття міксера чиста / замінена за потреби; міксер чистий",
+    "Міксер і робоча зона чисті",
+    "Дрібні господарські роботи виконані або проблема зафіксована"
+  ];
+  const standardItems = staffChecks.map((label, key) => ({label, key})).filter(item => ![3, 8].includes(item.key));
+  const staffRevisionChecks = [
+    "Фактичні залишки перераховані",
+    "Залишки звірені з обліком",
+    "Нестачі / надлишки / пересорт зафіксовані",
+    "Пошкоджений товар зафіксований",
+    "Прострочений товар перевірений і зафіксований",
+    "Товар, строк якого скоро закінчується, зафіксований",
+    "Про проблеми повідомлено відповідального",
+  ];
+  let staffReadError = "";
+  let pendingRevisionPhotos = null;
+
+  function isStaffRecord(value) {
+    return value !== null && typeof value === "object" && !Array.isArray(value);
+  }
+
+  function freshStaffData() {
+    return {
+      base: 15000,
+      rates: staffRatesDefault.map((rate, index) => ({ id: `r${index}`, name: rate[0], rate: rate[1], unit: rate[2] })),
+      shifts: [],
+      active: null,
+      works: [],
+      standards: {},
+      revisions: {},
+      audit: []
+    };
+  }
+
+  function normalizeStaffData(value) {
+    const defaults = freshStaffData();
+    if (!isStaffRecord(value)) return defaults;
+    return {
+      ...defaults,
+      ...value,
+      base: Number.isFinite(Number(value.base)) && Number(value.base) >= 0 ? Number(value.base) : defaults.base,
+      rates: Array.isArray(value.rates) ? value.rates : defaults.rates,
+      shifts: Array.isArray(value.shifts) ? value.shifts : defaults.shifts,
+      active: typeof value.active === "string" ? value.active : null,
+      works: Array.isArray(value.works) ? value.works : defaults.works,
+      standards: isStaffRecord(value.standards) ? value.standards : defaults.standards,
+      revisions: isStaffRecord(value.revisions) ? value.revisions : defaults.revisions,
+      audit: Array.isArray(value.audit) ? value.audit : defaults.audit
+    };
+  }
+
+  function setStaffNotice(message, isError = false) {
+    const notice = document.getElementById("staffnotice");
+    notice.textContent = message;
+    notice.hidden = !message;
+    notice.classList.toggle("danger", isError);
+  }
+
+  function loadStaffData() {
+    const raw = localStorage.getItem(STAFF_KEY);
+    if (!raw) return freshStaffData();
+    try {
+      const parsed = JSON.parse(raw);
+      if (!isStaffRecord(parsed)) throw new Error("Некоректна структура даних.");
+      return normalizeStaffData(parsed);
+    } catch (error) {
+      staffReadError = "Не вдалося прочитати myCompanyStaff_v13. Дані не перезаписано. Відновіть їх із резервної копії.";
+      return freshStaffData();
+    }
+  }
+
+  function saveStaffData(allowReplacingUnreadable = false) {
+    if (staffReadError && !allowReplacingUnreadable) {
+      setStaffNotice(staffReadError, true);
+      return false;
+    }
+    try {
+      localStorage.setItem(STAFF_KEY, JSON.stringify(S));
+      staffReadError = "";
+      setStaffNotice("Дані працівника збережено.");
+      return true;
+    } catch (error) {
+      setStaffNotice("Не вдалося зберегти дані. Перевірте вільне місце в браузері та розмір фото.", true);
+      return false;
+    }
+  }
+
+  function staffPlan(month) {
+    const [year, monthNumber] = month.split("-").map(Number);
+    const daysInMonth = new Date(year, monthNumber, 0).getDate();
+    let hours = 0;
+    for (let date = 1; date <= daysInMonth; date += 1) {
+      const weekday = new Date(year, monthNumber - 1, date).getDay();
+      if (weekday > 0 && weekday < 6) hours += 9;
+    }
+    return hours;
+  }
+
+  function staffMinutes(start, end) {
+    const minutes = Math.round((new Date(end) - new Date(start)) / 60000);
+    return Number.isFinite(minutes) ? Math.max(0, minutes) : 0;
+  }
+
+  function staffFormatTime(minutes) {
+    const rounded = Math.round(minutes);
+    const hours = Math.floor(rounded / 60);
+    const remainingMinutes = rounded % 60;
+    if (hours && remainingMinutes) return `${hours} год ${remainingMinutes} хв`;
+    if (hours) return `${hours} год`;
+    return remainingMinutes ? `${remainingMinutes} хв` : "0 хв";
+  }
+
+  function staffFormatDate(value) {
+    const date = new Date(value);
+    return Number.isNaN(date.getTime()) ? esc(value || "—") : date.toLocaleDateString("uk-UA");
+  }
+
+  function staffFormatTimeOfDay(value) {
+    const date = new Date(value);
+    return Number.isNaN(date.getTime()) ? "—" : date.toLocaleTimeString("uk-UA", { hour: "2-digit", minute: "2-digit" });
+  }
+
+  function staffStatusValue(record, index, legacyField, legacyValue) {
+    if (record.status && record.status[index]) return record.status[index];
+    if (record[legacyField] && record[legacyField][index]) return legacyValue;
+    return "";
+  }
+
+  function renderStaff() {
+    const month = mon();
+    const plan = staffPlan(month);
+    const minutes = S.shifts
+      .filter((shift) => shift && typeof shift.start === "string" && shift.start.slice(0, 7) === month)
+      .reduce((total, shift) => total + staffMinutes(shift.start, shift.end), 0);
+    const piecework = S.works
+      .filter((work) => work && !work.voided && typeof work.date === "string" && work.date.slice(0, 7) === month)
+      .reduce((total, work) => total + (Number(work.amount) || 0), 0);
+
+    document.getElementById("staff-baseview").textContent = M(S.base);
+    document.getElementById("staff-hoursview").textContent = staffFormatTime(minutes);
+    document.getElementById("staff-planview").textContent = `План: ${plan} год • ${(plan ? S.base / plan : 0).toFixed(2)} грн/год`;
+    document.getElementById("staff-salaryview").textContent = M(minutes / 60 * (plan ? S.base / plan : 0) + piecework);
+    document.getElementById("staff-baseinput").value = S.base;
+    document.getElementById("staff-start").classList.toggle("hide", Boolean(S.active));
+    document.getElementById("staff-end").classList.toggle("hide", !S.active);
+    document.getElementById("staff-shiftstate").innerHTML = S.active
+      ? `<span class="status ok">Зміна відкрита</span> ${staffFormatTimeOfDay(S.active)}`
+      : '<span class="status">Зміна не відкрита</span>';
+
+    document.getElementById("staff-shiftlog").innerHTML = [...S.shifts].reverse().map((shift) =>
+      `<tr><td>${staffFormatDate(shift.start)}</td><td>${staffFormatTimeOfDay(shift.start)}</td><td>${staffFormatTimeOfDay(shift.end)}</td><td>${staffFormatTime(staffMinutes(shift.start, shift.end))}</td></tr>`
+    ).join("") || '<tr><td colspan="4" class="note">Змін ще не зафіксовано.</td></tr>';
+
+    renderStaffRates();
+    renderStaffWork();
+    renderStaffChecks();
+    renderStaffRevision();
+  }
+
+  function startStaffShift() {
+    if (S.active) return;
+    const startedAt = new Date().toISOString();
+    S.active = startedAt;
+    S.audit.push({ at: startedAt, type: "start" });
+    if (saveStaffData()) renderStaff();
+  }
+
+  function endStaffShift() {
+    if (!S.active) return;
+    const endedAt = new Date().toISOString();
+    S.shifts.push({ start: S.active, end: endedAt });
+    S.audit.push({ at: endedAt, type: "end", start: S.active });
+    S.active = null;
+    if (saveStaffData()) renderStaff();
+  }
+
+  function currentStaffRate() {
+    const select = document.getElementById("staff-wt");
+    return S.rates.find((rate) => rate && String(rate.id) === select.value) || S.rates[0] || null;
+  }
+
+  function calculateStaffWork() {
+    const rate = currentStaffRate();
+    if (!rate) {
+      document.getElementById("staff-ql").textContent = "Кількість";
+      document.getElementById("staff-wcalc").textContent = M(0);
+      return;
+    }
+    document.getElementById("staff-ql").textContent = `Кількість (${esc(rate.unit || "")})`;
+    document.getElementById("staff-wcalc").textContent = M((Number(document.getElementById("staff-wq").value) || 0) * (Number(rate.rate) || 0));
+  }
+
+  function renderStaffWork() {
+    const select = document.getElementById("staff-wt");
+    const previouslySelected = select.value;
+    select.innerHTML = S.rates.map((rate, index) => {
+      const id = rate && rate.id != null ? String(rate.id) : `legacy-rate-${index}`;
+      const name = rate && rate.name != null ? rate.name : "Робота";
+      const amount = rate && Number.isFinite(Number(rate.rate)) ? Number(rate.rate) : 0;
+      const unit = rate && rate.unit != null ? rate.unit : "";
+      return `<option value="${esc(id)}">${esc(name)} — ${amount} грн/${esc(unit)}</option>`;
+    }).join("") || '<option value="">Немає тарифів</option>';
+    if (S.rates.some((rate, index) => String(rate && rate.id != null ? rate.id : `legacy-rate-${index}`) === previouslySelected)) {
+      select.value = previouslySelected;
+    }
+    calculateStaffWork();
+
+    document.getElementById("staff-worklog").innerHTML = [...S.works].reverse().map((work) => {
+      const id = work && work.id != null ? String(work.id) : "";
+      const status = work && work.voided ? `<span class="note">${work.cancelled ? "скасовано" : "виправлено"}</span>` :
+        `<button type="button" data-staff-action="correct" data-id="${esc(id)}">Виправити</button> <button type="button" class="danger" data-staff-action="cancel" data-id="${esc(id)}">Скасувати</button>`;
+      return `<tr style="${work && work.voided ? "opacity:.45;text-decoration:line-through" : ""}"><td>${staffFormatDate(work && work.date)}</td><td>${esc(work && work.name || "")}</td><td>${esc((work && work.qty) ?? "")} ${esc(work && work.unit || "")}</td><td>${M(work && work.amount)}</td><td>${esc(work && work.comment || "")}</td><td>${status}</td></tr>`;
+    }).join("") || '<tr><td colspan="6" class="note">Робіт ще не додано.</td></tr>';
+  }
+
+  function addStaffWork() {
+    const rate = currentStaffRate();
+    const quantityInput = document.getElementById("staff-wq");
+    const quantity = Number(quantityInput.value);
+    if (!rate || !Number.isFinite(quantity) || quantity <= 0) {
+      alert("Вкажіть тариф і кількість більше нуля.");
+      return;
+    }
+    const recordedAt = new Date().toISOString();
+    const work = {
+      id: `w${Date.now()}`,
+      date: recordedAt,
+      name: String(rate.name || ""),
+      qty: quantity,
+      unit: String(rate.unit || ""),
+      rate: Number(rate.rate) || 0,
+      amount: quantity * (Number(rate.rate) || 0),
+      comment: document.getElementById("staff-wc").value.trim(),
+      voided: false
+    };
+    S.works.push(work);
+    S.audit.push({ at: recordedAt, type: "work", id: work.id });
+    if (saveStaffData()) {
+      quantityInput.value = "";
+      document.getElementById("staff-wc").value = "";
+      renderStaff();
+    }
+  }
+
+  function correctStaffWork(id) {
+    const original = S.works.find((work) => work && String(work.id) === String(id));
+    if (!original || original.voided) return;
+    const quantity = prompt("Правильна кількість:", original.qty);
+    if (quantity === null || !Number.isFinite(Number(quantity)) || Number(quantity) <= 0) return;
+    const comment = prompt("Правильний коментар:", original.comment || "");
+    if (comment === null) return;
+    const correctedAt = new Date().toISOString();
+    original.voided = true;
+    const corrected = {
+      ...original,
+      id: `w${Date.now()}`,
+      date: correctedAt,
+      qty: Number(quantity),
+      amount: Number(quantity) * (Number(original.rate) || 0),
+      comment,
+      voided: false,
+      correctionOf: original.id
+    };
+    S.works.push(corrected);
+    S.audit.push({ at: correctedAt, type: "correction", old: original.id, new: corrected.id });
+    if (saveStaffData()) renderStaff();
+  }
+
+  function cancelStaffWork(id) {
+    const work = S.works.find((entry) => entry && String(entry.id) === String(id));
+    if (!work || work.voided || !confirm("Скасувати цей запис? Він залишиться в історії, але не буде врахований у зарплаті.")) return;
+    work.voided = true;
+    work.cancelled = true;
+    work.cancelledAt = new Date().toISOString();
+    S.audit.push({ at: work.cancelledAt, type: "cancel", id: work.id });
+    if (saveStaffData()) renderStaff();
+  }
+
+  function renderStaffRates() {
+    document.getElementById("staff-rates").innerHTML = S.rates.map((rate, index) =>
+      `<div class="rate"><div class="form"><div class="field"><label for="staff-rn${index}">Робота</label><input id="staff-rn${index}" value="${esc(rate && rate.name || "")}"></div><div class="field"><label for="staff-rr${index}">Тариф, грн</label><input id="staff-rr${index}" type="number" min="0" step=".01" value="${Number(rate && rate.rate) || 0}"></div><div class="field"><label for="staff-ru${index}">Одиниця</label><input id="staff-ru${index}" value="${esc(rate && rate.unit || "")}"></div></div><button type="button" onclick="saveStaffRate(${index})">Зберегти</button> <button type="button" class="danger" onclick="deleteStaffRate(${index})">Видалити</button></div>`
+    ).join("") || '<p class="note">Тарифів ще немає.</p>';
+  }
+
+  function saveStaffRate(index) {
+    const rate = S.rates[index];
+    const name = document.getElementById(`staff-rn${index}`).value.trim();
+    const amount = Number(document.getElementById(`staff-rr${index}`).value);
+    const unit = document.getElementById(`staff-ru${index}`).value.trim();
+    if (!rate || !name || !unit || !Number.isFinite(amount) || amount < 0) return alert("Перевірте назву, тариф і одиницю.");
+    Object.assign(rate, { name, rate: amount, unit });
+    if (saveStaffData()) {
+      renderStaff();
+      alert("Тариф змінено.");
+    }
+  }
+
+  function deleteStaffRate(index) {
+    if (!S.rates[index] || !confirm("Видалити тариф?")) return;
+    S.rates.splice(index, 1);
+    if (saveStaffData()) renderStaff();
+  }
+
+  function addStaffRate() {
+    const name = document.getElementById("staff-newname").value.trim();
+    const amountText = document.getElementById("staff-newrate").value;
+    const amount = Number(amountText);
+    const unit = document.getElementById("staff-newunit").value.trim();
+    if (!name || amountText === "" || !Number.isFinite(amount) || amount < 0 || !unit) {
+      alert("Заповніть назву, невід’ємний тариф і одиницю.");
+      return;
+    }
+    S.rates.push({ id: `r${Date.now()}`, name, rate: amount, unit });
+    if (saveStaffData()) {
+      document.getElementById("staff-newname").value = "";
+      document.getElementById("staff-newrate").value = "";
+      document.getElementById("staff-newunit").value = "";
+      renderStaff();
+    }
+  }
+
+  function renderStaffChecks() {
+    const record = S.standards[day()] || { status: {}, note: "" };
+    document.getElementById("staff-checks").innerHTML = standardItems.map(({label, key: index}) => {
+      const value = staffStatusValue(record, index, "c", "done");
+      return `<div class="statusrow"><b>${esc(label)}</b><select id="staff-c${index}"><option value="" ${value === "" ? "selected" : ""}>— Оберіть статус —</option><option value="done" ${value === "done" ? "selected" : ""}>✅ Виконано</option><option value="na" ${value === "na" ? "selected" : ""}>➖ Не було потреби</option><option value="problem" ${value === "problem" ? "selected" : ""}>⚠️ Є проблема</option></select></div>`;
+    }).join("");
+    document.getElementById("staff-stdcomment").value = record.note || "";
+    document.getElementById("staff-standard-result").textContent = record.saved ? "✅ Чек-лист за " + day() + " збережено о " + new Date(record.saved).toLocaleTimeString("uk-UA") : "За сьогодні чек-лист ще не збережено.";
+  }
+
+  function saveStaffStandard() {
+    const result = document.getElementById("staff-standard-result");
+    const status = {...(S.standards[day()]?.status || {})};
+    standardItems.forEach(({key}) => { status[key] = document.getElementById(`staff-c${key}`).value; });
+    const note = document.getElementById("staff-stdcomment").value.trim();
+    if (standardItems.some(({key}) => status[key] === "problem") && !note) {
+      result.textContent = "⚠️ Опишіть проблему в коментарі, потім натисніть «Зберегти».";
+      document.getElementById("staff-stdcomment").focus(); return;
+    }
+    const previous = S.standards[day()];
+    S.standards[day()] = {...previous, status, note, saved: new Date().toISOString()};
+    if (saveStaffData()) {
+      result.textContent = "✅ Чек-лист за " + day() + " збережено о " + new Date(S.standards[day()].saved).toLocaleTimeString("uk-UA") + ".";
+    } else {
+      if (previous === undefined) delete S.standards[day()]; else S.standards[day()] = previous;
+      result.textContent = "❌ Не збережено. " + document.getElementById("staffnotice").textContent;
+    }
+  }
+
+  function renderStaffRevision() {
+    const record = S.revisions[mon()] || { status: {}, note: "", photos: [] };
+    document.getElementById("staff-revchecks").innerHTML = staffRevisionChecks.map((label, index) => {
+      const value = staffStatusValue(record, index, "c", "ok");
+      return `<div class="statusrow"><b>${esc(label)}</b><select id="staff-rv${index}"><option value="" ${value === "" ? "selected" : ""}>— Оберіть результат —</option><option value="ok" ${value === "ok" ? "selected" : ""}>✅ Перевірено — все добре</option><option value="problem" ${value === "problem" ? "selected" : ""}>⚠️ Виявлено проблему</option></select></div>`;
+    }).join("");
+    document.getElementById("staff-revnote").value = record.note || "";
+    document.getElementById("staff-photopreview").innerHTML = (Array.isArray(record.photos) ? record.photos : []).map((photo) => `<img src="${esc(photo)}" alt="Фото ревізії">`).join("");
+    document.getElementById("staff-revhistory").innerHTML = Object.keys(S.revisions).sort().reverse().map((month) => {
+      const revision = S.revisions[month] || {};
+      const photos = Array.isArray(revision.photos) ? revision.photos.length : 0;
+      return `<div class="rate"><b>${esc(month)}</b> — ревізію збережено • 📷 ${photos} фото<br><span class="note">${esc(revision.note || "")}</span></div>`;
+    }).join("");
+  }
+
+  function readCompressedStaffPhoto(file) {
+    return new Promise((resolve, reject) => {
+      if (!file.type.startsWith("image/")) return reject(new Error("Оберіть файли зображень."));
+      const reader = new FileReader();
+      reader.onerror = () => reject(new Error("Не вдалося прочитати фото."));
+      reader.onload = () => {
+        const image = new Image();
+        image.onerror = () => reject(new Error("Не вдалося відкрити одне з фото."));
+        image.onload = () => {
+          const scale = Math.min(1, 700 / Math.max(image.width, image.height));
+          const canvas = document.createElement("canvas");
+          canvas.width = Math.max(1, Math.round(image.width * scale));
+          canvas.height = Math.max(1, Math.round(image.height * scale));
+          const context = canvas.getContext("2d");
+          if (!context) return reject(new Error("Браузер не зміг підготувати фото."));
+          context.drawImage(image, 0, 0, canvas.width, canvas.height);
+          try {
+            resolve(canvas.toDataURL("image/jpeg", 0.55));
+          } catch (error) {
+            reject(error);
+          }
+        };
+        image.src = reader.result;
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+
+  async function previewStaffPhotos(input) {
+    const files = [...input.files];
+    if (files.length > 4) {
+      input.value = "";
+      alert("Для фотозвіту можна додати не більше 4 фото.");
+      return;
+    }
+    if (!files.length) return;
+    try {
+      pendingRevisionPhotos = await Promise.all(files.map(readCompressedStaffPhoto));
+      document.getElementById("staff-photopreview").innerHTML = pendingRevisionPhotos.map((photo) => `<img src="${photo}" alt="Попередній перегляд фото">`).join("");
+    } catch (error) {
+      pendingRevisionPhotos = null;
+      input.value = "";
+      alert(error.message || "Не вдалося підготувати фото.");
+    }
+  }
+
+  function saveStaffRevision() {
+    const status = {};
+    staffRevisionChecks.forEach((_, index) => { status[index] = document.getElementById(`staff-rv${index}`).value; });
+    const note = document.getElementById("staff-revnote").value.trim();
+    if (Object.values(status).includes("problem") && !note) return alert("Виявлено проблему. Обов’язково опишіть її нижче.");
+    const previous = S.revisions[mon()] || {};
+    S.revisions[mon()] = {
+      status,
+      note,
+      photos: pendingRevisionPhotos || previous.photos || [],
+      saved: new Date().toISOString()
+    };
+    if (saveStaffData()) {
+      pendingRevisionPhotos = null;
+      document.getElementById("staff-revphotos").value = "";
+      renderStaff();
+      alert("Ревізію збережено.");
+    }
+  }
+
+  function saveStaffBase() {
+    const input = document.getElementById("staff-baseinput");
+    const amount = Number(input.value);
+    if (input.value === "" || !Number.isFinite(amount) || amount < 0) return alert("Вкажіть невід’ємну базову оплату.");
+    S.base = amount;
+    if (saveStaffData()) {
+      renderStaff();
+      alert("Базову оплату змінено.");
+    }
+  }
+
+  function buildStaffBackup() {
+    if (staffReadError) throw new Error(staffReadError);
+    return {
+      version: "1.4.0-staff",
+      exportedAt: new Date().toISOString(),
+      staff: S
+    };
+  }
+
+  function exportStaffData() {
+    let backup;
+    try {
+      backup = buildStaffBackup();
+    } catch (error) {
+      setStaffNotice(error.message, true);
+      return;
+    }
+    const blob = new Blob([JSON.stringify(backup, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `moya-kompaniya-staff-backup-${day()}.json`;
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 2000);
+    setStaffNotice("Резервну копію даних працівника створено.");
+  }
+
+  function validStaffBackup(data) {
+    const candidate = isStaffRecord(data) && isStaffRecord(data.staff) ? data.staff : data;
+    if (!isStaffRecord(candidate)) return false;
+    const staffFields = ["base", "rates", "shifts", "active", "works", "standards", "revisions", "audit"];
+    if (!staffFields.some((field) => Object.prototype.hasOwnProperty.call(candidate, field))) return false;
+    for (const field of ["rates", "shifts", "works", "audit"]) {
+      if (field in candidate && !Array.isArray(candidate[field])) return false;
+    }
+    for (const field of ["standards", "revisions"]) {
+      if (field in candidate && !isStaffRecord(candidate[field])) return false;
+    }
+    if ("base" in candidate && (!Number.isFinite(Number(candidate.base)) || Number(candidate.base) < 0)) return false;
+    return true;
+  }
+
+  function importStaffData(input) {
+    const file = input.files && input.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onerror = () => {
+      setStaffNotice("Не вдалося прочитати резервну копію.", true);
+      input.value = "";
+    };
+    reader.onload = () => {
+      try {
+        const backup = JSON.parse(reader.result);
+        if (!validStaffBackup(backup)) throw new Error("Файл не містить коректних даних модуля «Працівники».");
+        const imported = isStaffRecord(backup.staff) ? backup.staff : backup;
+        if (!confirm("Відновити резервну копію модуля «Працівники»? Інші розділи не зміняться.")) return;
+        const previous = S;
+        S = normalizeStaffData(imported);
+        if (!saveStaffData(true)) {
+          S = previous;
+          return;
+        }
+        renderStaff();
+        alert("Дані працівника відновлено з резервної копії.");
+      } catch (error) {
+        setStaffNotice(error.message || "Не вдалося прочитати резервну копію.", true);
+      } finally {
+        input.value = "";
+      }
+    };
+    reader.readAsText(file);
+  }
+
+  Object.assign(window, {
+    startStaffShift,
+    endStaffShift,
+    calculateStaffWork,
+    addStaffWork,
+    saveStaffStandard,
+    previewStaffPhotos,
+    saveStaffRevision,
+    saveStaffBase,
+    saveStaffRate,
+    deleteStaffRate,
+    addStaffRate,
+    exportStaffData,
+    importStaffData
+  });
+
+  root.querySelectorAll(".tabs [data-t]").forEach((button) => {
+    button.addEventListener("click", () => {
+      root.querySelectorAll(".tabs [data-t]").forEach((tab) => tab.classList.remove("on"));
+      root.querySelectorAll(".stafftab").forEach((tab) => tab.classList.remove("on"));
+      button.classList.add("on");
+      document.getElementById(button.dataset.t).classList.add("on");
+      renderStaff();
+    });
+  });
+  document.getElementById("staff-worklog").addEventListener("click", (event) => {
+    const button = event.target.closest("button[data-staff-action]");
+    if (!button) return;
+    if (button.dataset.staffAction === "correct") correctStaffWork(button.dataset.id);
+    if (button.dataset.staffAction === "cancel") cancelStaffWork(button.dataset.id);
+  });
+
+  S = normalizeStaffData(loadStaffData());
+  renderStaff();
+  if (staffReadError) setStaffNotice(staffReadError, true);
+})();
+
+</script><script>
+/* Local storage for the isolated stabilization pages. Does not change cloud sync. */
+(function () {
+  'use strict';
+  const object = x => x !== null && typeof x === 'object' && !Array.isArray(x);
+  const number = x => typeof x === 'number' && Number.isFinite(x) && x >= 0;
+  const text = x => typeof x === 'string';
+  const date = x => text(x) && Number.isFinite(Date.parse(x));
+  const id = x => text(x) || (typeof x === 'number' && Number.isFinite(x));
+  function staff(x) {
+    return object(x) && number(x.base) && Array.isArray(x.rates) && x.rates.every(r => object(r) && id(r.id) && text(r.name) && text(r.unit) && number(r.rate)) &&
+      Array.isArray(x.shifts) && x.shifts.every(s => object(s) && date(s.start) && date(s.end) && Date.parse(s.end) >= Date.parse(s.start)) &&
+      (x.active == null || date(x.active)) && Array.isArray(x.works) && x.works.every(w => object(w) && id(w.id) && date(w.date) && text(w.name) && text(w.unit) && number(w.qty) && number(w.rate) && number(w.amount)) &&
+      object(x.standards) && Object.values(x.standards).every(s => object(s) && object(s.status)) &&
+      object(x.revisions) && Object.values(x.revisions).every(r => object(r) && object(r.status) && (r.photos === undefined || (Array.isArray(r.photos) && r.photos.every(text)))) &&
+      (x.audit === undefined || Array.isArray(x.audit));
+  }
+  function market(x) {
+    return object(x) && (Object.keys(x).length === 0 || Array.isArray(x.competitors) || Array.isArray(x.manufacturers)) && ['competitors', 'manufacturers'].every(k => x[k] === undefined || (Array.isArray(x[k]) && x[k].every(e =>
+      object(e) && id(e.id) && text(e.name) && (e.products === undefined || (Array.isArray(e.products) && e.products.every(p => object(p) && id(p.id) && text(p.name) && text(p.unit)))) &&
+      (e.checks === undefined || (Array.isArray(e.checks) && e.checks.every(c => object(c) && date(c.date) && object(c.prices) && Object.values(c.prices).every(v => v === null || number(v))))))));
+  }
+  function download(name, content) {
+    const url = URL.createObjectURL(new Blob([content], {type: 'application/json'}));
+    const a = document.createElement('a'); a.href = url; a.download = name; a.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+  function create(key, validate, fresh) {
+    let raw = null, blocked = false, message = '';
+    function decode(value) {
+      const data = JSON.parse(value);
+      if (!validate(data)) throw new Error('Непідтримувана або пошкоджена структура даних.');
+      return data;
+    }
+    let data;
+    try { raw = localStorage.getItem(key); data = raw === null ? fresh() : decode(raw); }
+    catch (e) { blocked = true; message = 'Збереження заблоковано: не вдалося прочитати дані. Вони не перезаписані. Збережіть копію та відновіть перевірений файл.'; data = fresh(); }
+    function check() {
+      if (blocked) throw new Error(message);
+      if (localStorage.getItem(key) !== raw) throw new Error('Дані змінилися в іншій вкладці. Оновіть сторінку перед продовженням.');
+    }
+    function write(next) {
+      check();
+      if (!validate(next)) throw new Error('Запис не збережено: перевірте введені значення.');
+      const value = JSON.stringify(next);
+      try { localStorage.setItem(key, value); }
+      catch (e) { throw new Error('Не вдалося зберегти: сховище недоступне або переповнене. Збережені раніше дані залишено без змін.'); }
+      raw = value; data = next;
+    }
+    function exportFile() {
+      const value = localStorage.getItem(key);
+      // Invalid data are exported verbatim, never silently replaced with defaults.
+      download(key + (blocked ? '-recovery' : '-backup') + '.json', value === null ? JSON.stringify({format:'my-company-backup',version:1,key,data}) : (blocked ? value : JSON.stringify({format:'my-company-backup',version:1,key,data:decode(value)})));
+    }
+    async function importFile(file) {
+      if (!file) return null;
+      const before = localStorage.getItem(key);
+      let parsed = JSON.parse(await file.text());
+      if (object(parsed) && parsed.format === 'my-company-backup') {
+        if (parsed.version !== 1 || parsed.key !== key) throw new Error('Це резервна копія іншого модуля або версії.');
+        parsed = parsed.data;
+      }
+      if (!validate(parsed)) throw new Error('Файл не пройшов перевірку. Поточні дані не змінені.');
+      if (!confirm('Замінити дані цього модуля резервною копією? Поточний стан буде завантажено окремим файлом.')) return null;
+      if (localStorage.getItem(key) !== before) throw new Error('Дані змінилися під час імпорту. Оновіть сторінку.');
+      if (before !== null) download(key + '-before-import.json', before);
+      try { localStorage.setItem(key, JSON.stringify(parsed)); }
+      catch (e) { throw new Error('Імпорт не збережено: сховище недоступне або переповнене.'); }
+      raw = JSON.stringify(parsed); data = parsed; blocked = false; message = '';
+      return parsed;
+    }
+    return {data, check, write, exportFile, importFile, get message(){return message;}};
+  }
+  window.CompanyStore = {create, staff, market};
+})();
+
+</script><script>
+/* Exact market seed from archived v1.3.6, 24.10.2026. */
+window.CompanyMarketArchive = {
+  "version": 1,
+  "manufacturers": [
+    {
+      "id": "amres",
+      "name": "Амрес",
+      "phone": "",
+      "products": [
+        {
+          "id": "p0",
+          "name": "№31 — приклеювання",
+          "unit": "мішок 25 кг"
+        },
+        {
+          "id": "p1",
+          "name": "№34 — покращений для приклеювання",
+          "unit": "мішок 25 кг"
+        },
+        {
+          "id": "p2",
+          "name": "№88 — армування",
+          "unit": "мішок 25 кг"
+        },
+        {
+          "id": "p3",
+          "name": "№43 — покращений для армування",
+          "unit": "мішок 25 кг"
+        }
+      ],
+      "checks": [
+        {
+          "id": "amres-initial",
+          "date": "2026-10-24",
+          "prices": {
+            "p0": 156,
+            "p1": 179,
+            "p2": 194,
+            "p3": 228
+          },
+          "note": "Закупівельні ціни з доставкою. Дані власника."
+        }
+      ]
+    },
+    {
+      "id": "alba",
+      "name": "Альба",
+      "phone": "",
+      "products": [
+        {
+          "id": "p0",
+          "name": "Приклеювання",
+          "unit": "мішок 25 кг"
+        },
+        {
+          "id": "p1",
+          "name": "Армування",
+          "unit": "мішок 25 кг"
+        }
+      ],
+      "checks": [
+        {
+          "id": "alba-initial",
+          "date": "2026-10-24",
+          "prices": {
+            "p0": 153,
+            "p1": 158
+          },
+          "note": "Закупівельні ціни з доставкою. Дані власника."
+        }
+      ]
+    },
+    {
+      "id": "fts",
+      "name": "ФТС",
+      "phone": "",
+      "products": [
+        {
+          "id": "p0",
+          "name": "Приклеювання",
+          "unit": "мішок 25 кг"
+        },
+        {
+          "id": "p1",
+          "name": "Армування",
+          "unit": "мішок 25 кг"
+        }
+      ],
+      "checks": [
+        {
+          "id": "fts-initial",
+          "date": "2026-10-24",
+          "prices": {
+            "p0": 155,
+            "p1": 182
+          },
+          "note": "Закупівельні ціни з доставкою. Дані власника."
+        }
+      ]
+    },
+    {
+      "id": "warmix",
+      "name": "ВармІкс",
+      "phone": "",
+      "products": [
+        {
+          "id": "p0",
+          "name": "Приклеювання",
+          "unit": "мішок 25 кг"
+        },
+        {
+          "id": "p1",
+          "name": "Армування",
+          "unit": "мішок 25 кг"
+        }
+      ],
+      "checks": [
+        {
+          "id": "warmix-initial",
+          "date": "2026-10-24",
+          "prices": {
+            "p0": 147,
+            "p1": 169
+          },
+          "note": "Закупівельні ціни з доставкою. Дані власника."
+        }
+      ]
+    },
+    {
+      "id": "scanmix",
+      "name": "Сканмікс",
+      "phone": "",
+      "products": [
+        {
+          "id": "p0",
+          "name": "Приклеювання",
+          "unit": "мішок 25 кг"
+        },
+        {
+          "id": "p1",
+          "name": "Армування",
+          "unit": "мішок 25 кг"
+        }
+      ],
+      "checks": [
+        {
+          "id": "scanmix-initial",
+          "date": "2026-10-24",
+          "prices": {
+            "p0": 159,
+            "p1": 198
+          },
+          "note": "Закупівельні ціни з доставкою. Дані власника."
+        }
+      ]
+    },
+    {
+      "id": "anserglob",
+      "name": "Ансер Глоб",
+      "phone": "",
+      "products": [
+        {
+          "id": "p0",
+          "name": "№37 — приклеювання",
+          "unit": "мішок 25 кг"
+        },
+        {
+          "id": "p1",
+          "name": "№39 — армування",
+          "unit": "мішок 25 кг"
+        },
+        {
+          "id": "p2",
+          "name": "№40 — покращений для армування",
+          "unit": "мішок 25 кг"
+        }
+      ],
+      "checks": [
+        {
+          "id": "anserglob-initial",
+          "date": "2026-10-24",
+          "prices": {
+            "p0": 185,
+            "p1": 203,
+            "p2": 225
+          },
+          "note": "Закупівельні ціни з доставкою. Дані власника."
+        }
+      ]
+    }
+  ],
+  "competitors": [
+    {
+      "id": "c0",
+      "name": "Все для дому (біля Нової пошти)",
+      "phone": "097 762 72 27",
+      "products": [
+        {
+          "id": "eps",
+          "name": "Пінопласт 10 см",
+          "unit": "лист 0,5 м²"
+        },
+        {
+          "id": "glue",
+          "name": "Клей для приклеювання",
+          "unit": "мішок 25 кг"
+        },
+        {
+          "id": "mesh",
+          "name": "Клей для армування",
+          "unit": "мішок 25 кг"
+        }
+      ],
+      "checks": [
+        {
+          "id": "c0-initial",
+          "date": "2026-10-24",
+          "prices": {
+            "eps": null,
+            "glue": 219,
+            "mesh": 259
+          },
+          "note": "Клеї Альба. Ціну пінопласту уточнити."
+        }
+      ]
+    },
+    {
+      "id": "c1",
+      "name": "Білик",
+      "phone": "",
+      "products": [
+        {
+          "id": "eps",
+          "name": "Пінопласт 10 см",
+          "unit": "лист 0,5 м²"
+        },
+        {
+          "id": "glue",
+          "name": "Клей для приклеювання",
+          "unit": "мішок 25 кг"
+        },
+        {
+          "id": "mesh",
+          "name": "Клей для армування",
+          "unit": "мішок 25 кг"
+        }
+      ],
+      "checks": []
+    },
+    {
+      "id": "c2",
+      "name": "Безкоровайний",
+      "phone": "",
+      "products": [
+        {
+          "id": "eps",
+          "name": "Пінопласт 10 см",
+          "unit": "лист 0,5 м²"
+        },
+        {
+          "id": "glue",
+          "name": "Клей для приклеювання",
+          "unit": "мішок 25 кг"
+        },
+        {
+          "id": "mesh",
+          "name": "Клей для армування",
+          "unit": "мішок 25 кг"
+        }
+      ],
+      "checks": []
+    },
+    {
+      "id": "c3",
+      "name": "Аркада",
+      "phone": "",
+      "products": [
+        {
+          "id": "eps",
+          "name": "Пінопласт 10 см",
+          "unit": "лист 0,5 м²"
+        },
+        {
+          "id": "glue",
+          "name": "Клей для приклеювання",
+          "unit": "мішок 25 кг"
+        },
+        {
+          "id": "mesh",
+          "name": "Клей для армування",
+          "unit": "мішок 25 кг"
+        }
+      ],
+      "checks": []
+    },
+    {
+      "id": "c4",
+      "name": "Микола",
+      "phone": "",
+      "products": [
+        {
+          "id": "eps",
+          "name": "Пінопласт 10 см",
+          "unit": "лист 0,5 м²"
+        },
+        {
+          "id": "glue",
+          "name": "Клей для приклеювання",
+          "unit": "мішок 25 кг"
+        },
+        {
+          "id": "mesh",
+          "name": "Клей для армування",
+          "unit": "мішок 25 кг"
+        }
+      ],
+      "checks": []
+    },
+    {
+      "id": "c5",
+      "name": "Ромко",
+      "phone": "",
+      "products": [
+        {
+          "id": "eps",
+          "name": "Пінопласт 10 см",
+          "unit": "лист 0,5 м²"
+        },
+        {
+          "id": "glue",
+          "name": "Клей для приклеювання",
+          "unit": "мішок 25 кг"
+        },
+        {
+          "id": "mesh",
+          "name": "Клей для армування",
+          "unit": "мішок 25 кг"
+        }
+      ],
+      "checks": []
+    }
+  ]
+};
+
+</script><script>
+(function () {
+  'use strict';
+  const $ = id => document.getElementById('market-' + id);
+  const esc = v => String(v ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const today=()=>{const d=new Date();return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-');};
+  const uid=()=>typeof crypto.randomUUID==='function'?crypto.randomUUID():Array.from(crypto.getRandomValues(new Uint8Array(16)),b=>b.toString(16).padStart(2,'0')).join('');
+  const store=CompanyStore.create('myCompanyMarket_v1',CompanyStore.market,()=>JSON.parse(JSON.stringify(window.CompanyMarketArchive)));
+  let db=store.data,tab='competitors',editor=null;
+  function normalize(){db.competitors??=[];db.manufacturers??=[];}
+  normalize();
+  function change(fn){
+    const previous=JSON.stringify(db);
+    try{store.check();if(fn()===false)return false;store.write(db);editor=null;render();$('storageNotice').textContent='✅ Зміни збережено.';return true;}
+    catch(error){db=JSON.parse(previous);const errorBox=$('form-error')||$('storageNotice');errorBox.textContent='❌ '+error.message;return false;}
+  }
+  function ordered(x){return [...(x.checks||[])].sort((a,b)=>a.date.localeCompare(b.date));}
+  function latestPrice(x,id){const check=ordered(x).reverse().find(c=>Object.prototype.hasOwnProperty.call(c.prices||{},id));return {value:check?.prices[id]??null,date:check?.date||''};}
+  const field=(id,title,value='',extra='')=>`<div class="field"><label for="market-${id}">${esc(title)}</label><input id="market-${id}" value="${esc(value)}" ${extra}></div>`;
+  function editorHTML(x){
+    if(!editor||editor.id!==String(x.id))return '';
+    const action=editor.action,products=action==='price'?x.products.filter(p=>String(p.id)===editor.productId):x.products||[];
+    let fields,title;
+    if(action==='edit'){
+      title='Редагувати назву та контакти';
+      fields=field('edit-name','Назва',x.name,'required')+field('edit-phone','Контакт',x.phone||'')+`<div class="field"><label for="market-edit-notes">Примітка</label><textarea id="market-edit-notes">${esc(x.notes||'')}</textarea></div>`;
+    }else if(action==='product'){
+      title='Додати товар';fields=field('product-name','Назва товару','','required')+field('product-unit','Одиниця виміру','шт','required')+field('product-price','Ціна, грн (необов’язково)','','inputmode="decimal"');
+    }else{
+      title=action==='price'?'Змінити ціну товару':'Нова перевірка цін';
+      fields=products.map((p,i)=>field('price-'+i,p.name+' — грн / '+p.unit,latestPrice(x,p.id).value??'','inputmode="decimal" data-price-product="'+esc(p.id)+'"')).join('')+field('check-date','Дата ціни',today(),'type="date" required')+field('check-next','Наступна перевірка (необов’язково)','','type="date"')+field('check-note','Примітка');
+    }
+    return `<form id="market-editor" data-kind="${action}" data-id="${esc(x.id)}" class="box" style="background:#edf5ff"><h3>${title}</h3><div class="form">${fields}</div><p id="market-form-error" role="alert"></p><button type="submit" class="primary">Зберегти</button> <button type="button" data-market-cancel>Скасувати</button></form>`;
+  }
+  function render(){
+    $('list').innerHTML='<h2>'+(tab==='competitors'?'Конкуренти':'Виробники')+'</h2>'+db[tab].map(x=>{
+      const checks=ordered(x),last=checks.at(-1);
+      return `<div class="card"><b>${esc(x.name)}</b> <span class="small">${esc(x.phone||'')}</span><p>${esc(x.notes||'')}</p><div class="row">${[['edit','Редагувати'],['product','+ товар'],['check','+ перевірка цін']].map(([action,title])=>`<button type="button" data-action="${action}" data-id="${esc(x.id)}">${title}</button>`).join('')}</div><p class="small">Остання перевірка: ${esc(last?.date||'—')} • Наступна: ${esc(last?.next||'—')}</p><div class="scroll"><table><tr><th>Товар</th><th>Од.</th><th>Ціна, грн</th><th>Дата ціни</th><th></th></tr>${(x.products||[]).map(p=>{const price=latestPrice(x,p.id);return `<tr><td>${esc(p.name)}</td><td>${esc(p.unit)}</td><td>${esc(price.value??'—')}</td><td>${esc(price.date||'—')}</td><td><button type="button" data-action="price" data-id="${esc(x.id)}" data-product-id="${esc(p.id)}">Змінити ціну</button></td></tr>`;}).join('')}</table></div>${editorHTML(x)}<details><summary>Історія перевірок (${checks.length})</summary>${checks.map(c=>`<p>${esc(c.date)} • ${esc(c.note||'')} | ${(x.products||[]).filter(p=>Object.prototype.hasOwnProperty.call(c.prices||{},p.id)).map(p=>esc(p.name)+': '+esc(c.prices[p.id]??'—')+' грн / '+esc(p.unit)).join('; ')}</p>`).join('')}</details></div>`;
+    }).join('')+(db[tab].length?'':'<p>Записів немає.</p>');
+  }
+  $('addEntity').onclick=()=>{if(change(()=>{const name=$('name').value.trim();if(!name)return false;db[tab].push({id:uid(),name,phone:$('phone').value.trim(),notes:$('notes').value.trim(),products:[],checks:[]});})){$('name').value='';$('phone').value='';$('notes').value='';}};
+  $('list').onclick=e=>{
+    if(e.target.closest('[data-market-cancel]')){editor=null;render();return;}
+    const b=e.target.closest('button[data-action]');if(!b)return;
+    const x=db[tab].find(x=>String(x.id)===b.dataset.id);if(!x)return;
+    if(b.dataset.action==='check'&&!x.products?.length){editor={id:String(x.id),action:'product'};render();$('form-error').textContent='Спочатку додайте товар, потім внесіть ціну.';return;}
+    editor={id:String(x.id),action:b.dataset.action,productId:b.dataset.productId};render();
+    $('editor').scrollIntoView?.({block:'nearest',behavior:'smooth'});
+  };
+  function parsePrice(value){const text=value.trim();if(!text)return null;const amount=Number(text.replace(',','.'));if(!Number.isFinite(amount)||amount<0)throw new Error('Вкажіть невід’ємну числову ціну, наприклад 219 або 219,50.');return amount;}
+  function validDate(value){return /^\d{4}-\d{2}-\d{2}$/.test(value)&&Number.isFinite(Date.parse(value))&&new Date(value).toISOString().slice(0,10)===value;}
+  $('list').onsubmit=e=>{
+    const form=e.target.closest('#market-editor');if(!form)return;e.preventDefault();
+    const kind=form.dataset.kind;
+    try{
+      const values=kind==='edit'?{name:$('edit-name').value.trim(),phone:$('edit-phone').value.trim(),notes:$('edit-notes').value.trim()}:kind==='product'?{name:$('product-name').value.trim(),unit:$('product-unit').value.trim(),price:parsePrice($('product-price').value)}:{date:$('check-date').value,next:$('check-next').value,note:$('check-note').value.trim(),prices:Object.fromEntries([...form.querySelectorAll('[data-price-product]')].map(input=>[input.dataset.priceProduct,parsePrice(input.value)]).filter(([,price])=>price!==null))};
+      if((kind==='edit'||kind==='product')&&!values.name)throw new Error('Вкажіть назву.');
+      if(kind==='product'&&!values.unit)throw new Error('Вкажіть одиницю виміру.');
+      if(kind==='check'||kind==='price'){if(!Object.keys(values.prices).length)throw new Error('Введіть хоча б одну ціну. Порожнє поле залишає попередню ціну.');if(!validDate(values.date)||values.next&&!validDate(values.next))throw new Error('Перевірте дату.');}
+      change(()=>{
+        const x=db[tab].find(x=>String(x.id)===form.dataset.id);if(!x)throw new Error('Запис не знайдено. Оновіть сторінку.');
+        if(kind==='edit')Object.assign(x,values);
+        else if(kind==='product'){const id=uid();(x.products??=[]).push({id,name:values.name,unit:values.unit});if(values.price!==null)(x.checks??=[]).push({id:uid(),date:today(),prices:{[id]:values.price},note:'Ціна при додаванні товару.'});}
+        else (x.checks??=[]).push({id:uid(),...values});
+      });
+    }catch(error){$('form-error').textContent='❌ '+error.message;}
+  };
+  document.querySelectorAll('#market [data-tab]').forEach(b=>b.onclick=()=>{tab=b.dataset.tab;editor=null;render();});
+  $('storageNotice').textContent=store.message;
+  $('exportMarket').onclick=()=>{try{store.exportFile()}catch(e){$('storageNotice').textContent=e.message;}};
+  $('importMarket').onchange=async e=>{try{const next=await store.importFile(e.target.files[0]);if(next){db=next;normalize();editor=null;$('storageNotice').textContent='Копію відновлено';render();}}catch(error){$('storageNotice').textContent=error.message;}finally{e.target.value='';}};
+
+  $('restore-archive').onclick=()=>{
+    try {
+      store.check();
+      const next=JSON.parse(JSON.stringify(db)), archive=window.CompanyMarketArchive;
+      for (const kind of ['competitors','manufacturers']) for (const old of archive[kind]) {
+        let current=next[kind].find(e=>e.id===old.id||e.name.trim().toLocaleLowerCase('uk-UA')===old.name.trim().toLocaleLowerCase('uk-UA'));
+        if(!current){next[kind].push(JSON.parse(JSON.stringify(old)));continue;}
+        current.products??=[];current.checks??=[];
+        const map={};
+        for(const product of old.products){let existing=current.products.find(p=>p.id===product.id||p.name===product.name&&p.unit===product.unit);if(!existing){existing={...product};current.products.push(existing);}map[product.id]=existing.id;}
+        for(const check of old.checks){
+          const restored={...check,prices:Object.fromEntries(Object.entries(check.prices).map(([key,value])=>[map[key],value]))};
+          if(!current.checks.some(c=>c.id===restored.id||c.date===restored.date&&JSON.stringify(c.prices)===JSON.stringify(restored.prices)))current.checks.unshift(restored);
+        }
+        // Latest prices are chosen by date; archived checks cannot replace a newer check.
+        current.checks.sort((a,b)=>a.date.localeCompare(b.date));
+        if(!current.phone)current.phone=old.phone;
+      }
+      store.exportFile(); // Preserve the exact pre-restore state as a download.
+      store.write(next);db=next;render();
+      $('restore-result').textContent='✅ Архівні записи додано. Раніше внесені дані збережено.';
+    } catch(error) {$('restore-result').textContent='❌ Відновлення не виконано: '+error.message;}
+  };
+  render();
+})();
+
+</script><script>
+/* Integration fixes for the supplied Replit snapshot; no cloud connection. */
+(() => {
+  const keys = ['myCompanyStaff_v13','myCompanyOrg_v13','myCompanyOrgRoles_v2','myCompanyMonthly_v1','myCompanyPartners_v1','myCompanyTasks_v1','myCompanyMarket_v1'];
+  window.exportCompanyBackup = () => {
+    const data = Object.fromEntries(keys.map(k => [k, localStorage.getItem(k)]));
+    const url = URL.createObjectURL(new Blob([JSON.stringify({format:'my-company-full-backup',version:1,createdAt:new Date().toISOString(),data}, null, 2)], {type:'application/json'}));
+    const a = document.createElement('a'); a.href=url; a.download=`my-company-full-backup-${day()}.json`; a.click(); setTimeout(()=>URL.revokeObjectURL(url),1000);
+  };
+  const oldDash = dash;
+  dash = () => {
+    oldDash();
+    const data=JSON.parse(localStorage.getItem('myCompanyMonthly_v1')||'{}')[$('dm').value]||{};
+    $('ds').value=data.sales??''; $('dc').value=data.checks??''; $('dp').value=data.profit??'';
+  };
+  $('dm').onchange=dash; dash();
+  renderPartners = () => {
+    const area=$('pterritory').value, spec=$('pspecfilter').value;
+    const options=(field,value)=>'<option value="">Усі '+(field==='area'?'території':'спеціалізації')+'</option>'+[...new Set(P.map(p=>p[field]).filter(Boolean))].map(v=>`<option value="${esc(v)}" ${v===value?'selected':''}>${esc(v)}</option>`).join('');
+    $('pterritory').innerHTML=options('area',area); $('pspecfilter').innerHTML=options('spec',spec);
+    const query=$('psearch').value.trim().toLocaleLowerCase('uk-UA');
+    const list=P.filter(p=>(!area||p.area===area)&&(!spec||p.spec===spec)&&(!query||[p.name,p.phone,p.city,p.spec].join(' ').toLocaleLowerCase('uk-UA').includes(query)));
+    $('partnerlist').innerHTML=list.map(p=>`<div class="partnercard"><b>${esc(p.name)}</b><p>${esc(p.phone)} • ${esc(p.city||'')}</p><span class="badge">${esc(p.spec||'')}</span><span class="badge">${esc(p.rate)}%</span><p>${esc(p.notes||'')}</p></div>`).join('')||'<p class="note">Майстрів за цими умовами немає.</p>';
+  }; $("pterritory").onchange=renderPartners; $("pspecfilter").onchange=renderPartners; $("psearch").oninput=renderPartners; renderPartners();
+  renderTasks = () => {
+    const filter=$('taskfilter').value;
+    const list=T.filter(t=>filter==='all'||(filter==='done'?t.done:filter==='today'?!t.done&&t.date<=day():!t.done));
+    $('tasklist').innerHTML=list.map(t=>`<div class="partnercard"><b>${esc(t.name)}</b><p>${esc(t.action)}</p><small>${esc(t.date)} • ${esc(t.owner)} • ${esc(t.phone||'')}</small><p><button data-task-toggle="${esc(t.id)}">${t.done?'Повернути в роботу':'Виконано'}</button></p></div>`).join('')||'<p class="note">Завдань немає.</p>';
+  };
+  $('taskfilter').onchange=renderTasks;
+  $('tasklist').onclick=e=>{
+    const b=e.target.closest('[data-task-toggle]'); if(!b)return;
+    const next=T.map(t=>t.id===b.dataset.taskToggle?{...t,done:!t.done}:t);
+    try{localStorage.setItem(TK,JSON.stringify(next));T=next;renderTasks();}catch(error){alert('Не вдалося зберегти завдання.');}
+  }; renderTasks();
+  const oldPaint=paintOrg;
+  paintOrg=()=>{
+    oldPaint();
+    const owner=orgRole('owner');
+    document.querySelectorAll('#org .orgowner b,#org .orgmanagement .orgperson b').forEach(e=>e.textContent=owner.name);
+  }; paintOrg();
+})();
+
 </script><script>
 const CLOUD_URL='https://pkdkzkeqzpmglthbilyl.supabase.co',CLOUD_KEY='sb_publishable_5HDx6dWGoK66c8Isz4zoQQ_ERjEG5Vh';const cloud=window.supabase.createClient(CLOUD_URL,CLOUD_KEY);const CLOUD_KEYS=['myCompanyStaff_v13','myCompanyOrg_v13','myCompanyOrgRoles_v2','myCompanyMonthly_v1','myCompanyPartners_v1','myCompanyTasks_v1','myCompanyMarket_v1'];function cloudData(){let d={};CLOUD_KEYS.forEach(k=>d[k]=localStorage.getItem(k));return d}function cloudRestore(d){if(!d)return;CLOUD_KEYS.forEach(k=>{if(!(k in d))return;if(d[k]===null)localStorage.removeItem(k);else localStorage.setItem(k,d[k])})}async function cloudRow(user){const {data,error}=await cloud.from('company_data').select('data,updated_at').eq('user_id',user.id).maybeSingle();if(error)throw error;return data}function cloudPanel(html){let b=$('cloudBox');if(!b){b=document.createElement('div');b.id='cloudBox';b.style='position:fixed;right:10px;bottom:10px;z-index:9999;background:white;border:2px solid #17365d;border-radius:12px;padding:10px;max-width:320px;box-shadow:0 3px 15px #0003';document.body.appendChild(b)}b.innerHTML=html}function cloudLoginScreen(){cloudPanel('<b>☁️ Хмарна синхронізація</b><br><input id="cloudEmail" type="email" placeholder="Email" style="width:100%;margin-top:8px;padding:8px"><input id="cloudPass" type="password" placeholder="Пароль" style="width:100%;margin-top:6px;padding:8px"><button id="cloudLogin" style="width:100%;margin-top:6px">Увійти</button>');$('cloudLogin').onclick=cloudLogin}async function cloudLogin(){const {data,error}=await cloud.auth.signInWithPassword({email:$('cloudEmail').value.trim(),password:$('cloudPass').value});if(error)return alert('Не вдалося увійти');cloudActions(data.user)}async function cloudActions(user){let r;try{r=await cloudRow(user)}catch(e){return}cloudPanel('<b>☁️ Моя компанія</b><p id="cloudStatus">'+(r?'Хмарні дані знайдено':'Хмара поки порожня')+'</p><button id="cloudDown">⬇️ Взяти з хмари</button> <button id="cloudUp">⬆️ Зберегти в хмару</button>');$('cloudDown').onclick=async()=>{let x=await cloudRow(user);if(x&&confirm('Завантажити дані з хмари?')){cloudRestore(x.data);location.reload()}};$('cloudUp').onclick=async()=>{let r=await cloudRow(user),values={data:cloudData(),updated_at:new Date().toISOString()},q=r?cloud.from('company_data').update(values).eq('user_id',user.id):cloud.from('company_data').insert({...values,user_id:user.id});let z=await q;if(z.error)alert('Помилка збереження');else $('cloudStatus').textContent='✅ Дані збережено'}}cloud.auth.getSession().then(({data})=>{if(data.session)cloudActions(data.session.user);else cloudLoginScreen()});
 </script></body></html>
