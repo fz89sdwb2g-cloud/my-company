@@ -18,6 +18,6 @@ Uploads preserve pending selection on failure; a committed insert with a lost re
 
 - 23 existing integration and persistence scenarios passed.
 - 13 existing owner dashboard scenarios passed.
-- 17 photo-library scenarios passed using an in-memory Supabase/Storage contract mock (not live service verification).
+- 19 photo-library scenarios passed using an in-memory Supabase/Storage contract mock (not live service verification).
 - Browser checked real markup/navigation/login-required state, plus a 390px iframe viewport with no visible horizontal overflow.
 - Cloud activation and first real photo upload remain pending.
