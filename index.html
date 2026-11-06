@@ -1618,6 +1618,72 @@ const CLOUD_URL='https://pkdkzkeqzpmglthbilyl.supabase.co',CLOUD_KEY='sb_publish
 })();
 
 </script>
+
+<dialog id="cloudPasswordRecovery" aria-labelledby="cloudPasswordRecoveryTitle"
+  style="width:min(90vw,420px);padding:20px;border:1px solid #cbd5e1;border-radius:12px">
+  <h2 id="cloudPasswordRecoveryTitle">Новий пароль для хмари</h2>
+  <form>
+    <label for="cloudNewPassword">Новий пароль</label>
+    <input id="cloudNewPassword" name="newPassword" type="password"
+      autocomplete="new-password" minlength="6" required style="display:block;width:100%;margin:4px 0 12px">
+    <label for="cloudConfirmPassword">Повторіть новий пароль</label>
+    <input id="cloudConfirmPassword" name="confirmPassword" type="password"
+      autocomplete="new-password" minlength="6" required style="display:block;width:100%;margin:4px 0 12px">
+    <button type="submit">Зберегти пароль</button>
+  </form>
+  <p role="status"></p>
+  <button type="button" hidden>Готово</button>
+</dialog>
+
+<script>
+(() => {
+  const recovery = document.getElementById('cloudPasswordRecovery');
+  const form = recovery.querySelector('form');
+  const status = recovery.querySelector('[role="status"]');
+  const save = form.querySelector('button[type="submit"]');
+  const close = recovery.querySelector('button[type="button"]');
+
+  cloud.auth.onAuthStateChange((event, session) => {
+    if (event === 'PASSWORD_RECOVERY' && session && !recovery.open) {
+      recovery.showModal();
+    }
+  });
+
+  recovery.addEventListener('cancel', (event) => event.preventDefault());
+  close.addEventListener('click', () => recovery.close());
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (save.disabled) return;
+
+    const password = form.elements.newPassword.value;
+    if (password !== form.elements.confirmPassword.value) {
+      status.textContent = 'Паролі не збігаються.';
+      form.elements.confirmPassword.focus();
+      return;
+    }
+
+    save.disabled = true;
+    status.textContent = 'Зберігаємо новий пароль…';
+    try {
+      const { error } = await cloud.auth.updateUser({ password });
+      if (error) {
+        status.textContent = 'Не вдалося зберегти пароль. Перевірте вимоги до пароля або скористайтеся новим листом для відновлення.';
+        save.disabled = false;
+        return;
+      }
+      form.reset();
+      form.hidden = true;
+      status.textContent = 'Пароль збережено. Тепер ви можете увійти з новим паролем на іншому пристрої.';
+      close.hidden = false;
+      close.focus();
+    } catch {
+      status.textContent = 'Не вдалося зв’язатися з хмарою. Спробуйте ще раз.';
+      save.disabled = false;
+    }
+  });
+})();
+</script>
 </body></html>
 
 
