@@ -1,4 +1,4 @@
--- Hourly inventory sync. The dedicated credential stays inside Vault.
+-- Daily inventory sync at 07:00 Europe/Kyiv (legacy filename). The dedicated credential stays inside Vault.
 create extension if not exists pg_cron;
 create extension if not exists pg_net with schema extensions;
 alter table public.cust_inventory_snapshots
@@ -12,11 +12,14 @@ do $block$ begin
    'cust_inventory_sync_key','Dedicated key for hourly warehouse inventory sync only');
  end if;
 end $block$;
-select cron.schedule('cust-warehouse-hourly','0 * * * *',
+-- The scheduler uses UTC. One candidate matches 07:00 Kyiv in each season.
+select cron.unschedule(jobid) from cron.job where jobname='cust-warehouse-hourly';
+select cron.schedule('cust-warehouse-daily-kyiv','0 4,5 * * *',
 $cron$select net.http_post(
  url := 'https://pkdkzkeqzpmglthbilyl.supabase.co/functions/v1/cust-inventory-sync',
  headers := jsonb_build_object('Content-Type','application/json','x-cust-sync-key',
    (select decrypted_secret from vault.decrypted_secrets where name='cust_inventory_sync_key')),
  body := '{}'::jsonb,
  timeout_milliseconds := 120000
-);$cron$);
+)
+where extract(hour from now() at time zone 'Europe/Kyiv') = 7;$cron$);
