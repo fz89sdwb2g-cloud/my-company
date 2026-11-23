@@ -37,7 +37,7 @@
 </div>
 <div class="box"><h2 id="owner-signals-title">Фінансові питання</h2><div id="owner-signals"></div><button id="owner-all-signals">Усі питання</button><p class="note">Завдання з питань додаються в розділ «Завдання». Автоматичної перевірки фактичних кас, дублів витрат і боргів поки немає.</p></div>
 <div class="box" id="owner-review-section"><h2>Щотижнева звірка фінансів</h2><p id="owner-review-period"></p><p id="owner-review-status" role="status"></p><div id="owner-review-body"><label class="check"><input type="checkbox" data-owner-check="expenses">Перевірено, чи внесені всі витрати</label><label class="check"><input type="checkbox" data-owner-check="cash">Звірено фактичні гроші в касах і на рахунках з обліком</label><label class="check"><input type="checkbox" data-owner-check="debts">Перевірено прострочені оплати клієнтів</label><div class="field"><label for="owner-review-notes">Розбіжності, наступні дії та відповідальні</label><textarea id="owner-review-notes"></textarea></div><p class="note">Завершення звірки не усуває записані розбіжності. Вони залишаються окремими фінансовими питаннями.</p><button id="owner-review-complete" class="primary">Звірку завершено</button><div class="field"><label for="owner-snooze-until">Відкласти до (дата й час за Києвом)</label><input id="owner-snooze-until" type="datetime-local"></div><button id="owner-snooze-save">Відкласти</button></div><h3>Історія звірок</h3><div id="owner-review-history"></div><p class="note">Нагадування працює у відкритій програмі. Сповіщення на телефон при закритій програмі ще не налаштоване.</p></div>
-<div class="box" id="cust-operational-analysis"><h2>Продажі за періодами та проблемні залишки</h2><p id="cust-analysis-status" class="note"></p><h3>Порівняння продажів</h3><div id="cust-analysis-sales"></div><details><summary>Продажі за останні 14 завершених днів</summary><div id="cust-analysis-daily"></div></details><h3>Залишки: що потребує перевірки</h3><div id="cust-analysis-stock"></div></div><div class="box"><h2>Аналітика</h2><h3>Товарні залишки за закупівельною вартістю</h3><p>Магазини (спільна локація КУСТ): <b data-cust-stores-value>Завантаження…</b></p><p class="note" data-cust-stores-note></p><p>Склад 1 (КУСТ): <b data-cust-warehouse-value>Завантаження…</b></p><p class="note" data-cust-warehouse-note></p><button type="button" data-cust-warehouse-reload>Показати збережені дані</button><p class="note">Це вартість непроданого товару, а не гроші в касі чи витрати місяця.</p><h3>Середній чек і кількість продажів</h3><p class="note" data-cust-sales-note></p><p>Середній чек: <b id="owner-average">Немає даних</b></p><p>Кількість продажів: <b id="owner-checks">Немає даних</b></p><div id="owner-sales-detail" hidden><p>Продажі до повернень: <b id="owner-gross-sales"></b></p><p>Повернення: <b id="owner-returns-amount"></b> · чеків повернення: <b id="owner-returns-count"></b></p><p class="note">Виручка = продажі мінус повернення за період. Кількість продажів — лише чеки продажу, без чеків повернення. Середній чек = продажі до повернень ÷ кількість продажів. Ці дані охоплюють лише «Магазин» (loc-01), доступний у джерелі чеків КУСТ; це не підтверджений підсумок усіх локацій компанії.</p></div><h3>Порівняння однакових місяців різних років</h3><div class="partneractions"><label>Показник <select id="owner-chart-metric"><option value="sales">Виручка</option><option value="profit">Чистий прибуток</option></select></label><label style="color:#168c52">Рік (зелена лінія) <select id="owner-year-a"></select></label><label style="color:#765ad3">Рік (пунктирна лінія) <select id="owner-year-b"></select></label></div><p class="note">Порівнюються лише завершені місяці. Відсутні значення залишаються пропусками. Прибуток внесений вручну, повноту витрат потрібно перевірити.</p><div id="owner-chart"></div><details><summary>Числа графіка за місяцями</summary><div id="owner-chart-table" class="scroll"></div></details></div>
+<div class="box" id="cust-operational-analysis"><h2>Продажі за періодами та проблемні залишки</h2><p id="cust-analysis-status" class="note"></p><h3>Порівняння продажів</h3><div id="cust-analysis-sales"></div><details><summary>Продажі за останні 14 завершених днів</summary><div id="cust-analysis-daily"></div></details><h3>Залишки: що потребує перевірки</h3><div id="cust-analysis-stock"></div></div><div class="box"><h2>Аналітика</h2><h3>Товарні залишки за закупівельною вартістю</h3><p>Магазини (спільна локація КУСТ): <b data-cust-stores-value>Завантаження…</b></p><p class="note" data-cust-stores-note></p><p>Склад 1 (КУСТ): <b data-cust-warehouse-value>Завантаження…</b></p><p class="note" data-cust-warehouse-note></p><button type="button" data-cust-warehouse-reload>Оновити показані дані</button><p id="inventory-refresh-status" role="status" aria-live="polite"></p><details><summary>Історія товарних залишків</summary><p>Тут зберігаються успішні знімки залишків. Це вартість товару, не історія продажів чи рух кожного товару.</p><button type="button" id="inventory-history-load">Показати історію</button><p id="inventory-history-status" role="status" aria-live="polite"></p><div id="inventory-history" class="scroll"></div></details><p class="note">Це вартість непроданого товару, а не гроші в касі чи витрати місяця.</p><h3>Середній чек і кількість продажів</h3><p class="note" data-cust-sales-note></p><p>Середній чек: <b id="owner-average">Немає даних</b></p><p>Кількість продажів: <b id="owner-checks">Немає даних</b></p><div id="owner-sales-detail" hidden><p>Продажі до повернень: <b id="owner-gross-sales"></b></p><p>Повернення: <b id="owner-returns-amount"></b> · чеків повернення: <b id="owner-returns-count"></b></p><p class="note">Виручка = продажі мінус повернення за період. Кількість продажів — лише чеки продажу, без чеків повернення. Середній чек = продажі до повернень ÷ кількість продажів. Ці дані охоплюють лише «Магазин» (loc-01), доступний у джерелі чеків КУСТ; це не підтверджений підсумок усіх локацій компанії.</p></div><h3>Порівняння однакових місяців різних років</h3><div class="partneractions"><label>Показник <select id="owner-chart-metric"><option value="sales">Виручка</option><option value="profit">Чистий прибуток</option></select></label><label style="color:#168c52">Рік (зелена лінія) <select id="owner-year-a"></select></label><label style="color:#765ad3">Рік (пунктирна лінія) <select id="owner-year-b"></select></label></div><p class="note">Порівнюються лише завершені місяці. Відсутні значення залишаються пропусками. Прибуток внесений вручну, повноту витрат потрібно перевірити.</p><div id="owner-chart"></div><details><summary>Числа графіка за місяцями</summary><div id="owner-chart-table" class="scroll"></div></details></div>
 <details class="box"><summary>Внести або виправити місячні показники</summary><div class="box"><h3>Місячні показники</h3><div class="form"><div class="field"><label>Місяць</label><input id="dm" type="month"></div><div></div><div class="field"><label>Продажі, грн</label><input id="ds" type="number"></div><div class="field"><label>Кількість чеків</label><input id="dc" type="number"></div><div class="field"><label>Чистий прибуток, грн</label><input id="dp" type="number"></div></div><button class="primary" onclick="saveDash()">Зберегти</button></div><div hidden><span id="dpo"></span><span id="dav"></span><span id="dco"></span></div></details>
 </div>
 </section><section id="mark" class="sec"><div class="box"><h2>📣 Маркетинг</h2><b>ЦКП:</b> стабільний і вимірюваний потік цільових потенційних клієнтів за економічно вигідною вартістю.</div><div class="box" id="ad-library">
@@ -1855,7 +1855,8 @@ const CLOUD_URL='https://pkdkzkeqzpmglthbilyl.supabase.co',CLOUD_KEY='sb_publish
 /* Private inventory aggregates for each CUST location; no manual cloud data overwritten. */
 (() => {
   'use strict';
-  let currentUser=null,revision=0;
+  let currentUser=null,revision=0,historyRevision=0;
+  const status=document.getElementById('inventory-refresh-status'),history=document.getElementById('inventory-history');
   const groups=[{id:'loc-01',kind:'stores',scope:'КУСТ передає одну спільну локацію «Магазин»; окремих залишків магазину будматеріалів і ламінату в API немає.'},{id:'loc-02',kind:'warehouse',scope:'Окрема локація «Склад 1».'}];
   const money=new Intl.NumberFormat('uk-UA',{style:'currency',currency:'UAH'});
   const date=new Intl.DateTimeFormat('uk-UA',{dateStyle:'short',timeStyle:'short',timeZone:'Europe/Kyiv'});
@@ -1880,22 +1881,41 @@ const CLOUD_URL='https://pkdkzkeqzpmglthbilyl.supabase.co',CLOUD_KEY='sb_publish
       (interval===1440?'Автоматичне оновлення щодня о 07:00 за Києвом.':'')
     );
   }
-  async function load(user){
+  async function load(user,manual=false){
     currentUser=user;const request=++revision;
-    if(!user){all('Увійдіть у хмару','Дані КУСТ доступні після входу у ваш обліковий запис у блоці «Хмара».');return;}
+    if(manual)status.textContent="Завантажуємо останні збережені залишки…";
+    if(!user){if(manual)status.textContent='Спочатку увійдіть у хмару.';all('Увійдіть у хмару','Дані КУСТ доступні після входу у ваш обліковий запис у блоці «Хмара».');return;}
     try{
       const {data,error}=await cloud.from('cust_inventory_snapshots').select('location_id,location_name,stock_cost,currency,product_count,negative_quantity_count,as_of,complete,last_error_code,sync_interval_minutes,valuation_details').eq('user_id',user.id).in('location_id',groups.map(g=>g.id));
       if(request!==revision)return;if(error||!Array.isArray(data))throw Error();
       for(const g of groups){const matches=data.filter(r=>r.location_id===g.id);if(matches.length>1)throw Error();paint(g,matches[0]);}
-    }catch{if(request===revision)all('Не вдалося завантажити','Перевірте вхід у хмару та натисніть «Показати збережені дані».');}
+      if(manual)status.textContent="Збережені залишки завантажено. Це повторне читання хмари, без нового запиту до КУСТ.";
+    }catch{if(request===revision){if(manual)status.textContent='Не вдалося завантажити. Перевірте з’єднання та вхід у хмару.';all('Не вдалося завантажити','Перевірте вхід у хмару та натисніть «Оновити показані дані».');}}
   }
-  document.querySelectorAll('[data-cust-warehouse-reload],[data-cust-stores-reload]').forEach(b=>b.addEventListener('click',()=>load(currentUser)));
+  document.querySelectorAll('[data-cust-warehouse-reload],[data-cust-stores-reload]').forEach(b=>b.addEventListener('click',()=>load(currentUser,true)));
   cloud.auth.onAuthStateChange((_event,session)=>{
     const next=session?.user??null;
+    if(next?.id!==currentUser?.id){++historyRevision;history.replaceChildren();document.getElementById('inventory-history-status').textContent='';}
     if(next?.id!==currentUser?.id){++revision;currentUser=next;all(next?'Завантаження…':'Увійдіть у хмару','Перевіряємо обліковий запис.');setTimeout(()=>load(next),0);}
   });
   setInterval(()=>{if(currentUser&&!document.hidden)load(currentUser);},60000);
   window.addEventListener('focus',()=>{if(currentUser)load(currentUser);});
+
+  document.getElementById('inventory-history-load').addEventListener('click',async()=>{
+    const request=++historyRevision,owner=currentUser?.id,note=document.getElementById('inventory-history-status');
+    history.replaceChildren();if(!owner){note.textContent='Спочатку увійдіть у хмару.';return;}
+    note.textContent='Завантажуємо історію…';
+    try{
+      const {data,error}=await cloud.from('cust_inventory_history').select('location_id,as_of,imported_at,stock_cost,currency,product_count,negative_quantity_count').eq('user_id',owner).order('as_of',{ascending:false}).limit(120);
+      if(request!==historyRevision||owner!==currentUser?.id)return;
+      if(error||!Array.isArray(data))throw Error();
+      const table=document.createElement('table');table.style.width='100%';
+      function row(values,tag='td'){const tr=document.createElement('tr');for(const v of values){const cell=document.createElement(tag);cell.textContent=String(v);tr.append(cell);}table.append(tr);}
+      row(['Станом на (Київ)','Локація','Вартість товару','Позицій','Із мінусом'],'th');
+      for(const r of data)row([date.format(new Date(r.as_of)),r.location_id==='loc-01'?'Магазини спільно':'Склад 1',money.format(Number(r.stock_cost)),r.product_count,r.negative_quantity_count]);
+      history.append(table);note.textContent=data.length?'Показано '+data.length+' останніх збережених знімків. Знімки за минулі дні до початку накопичення відсутні.':'Збережених знімків ще немає.';
+    }catch{if(request===historyRevision)note.textContent='Історію не вдалося завантажити. Перевірте вхід і доступність хмари.';}
+  });
   const initialRevision=revision;
   cloud.auth.getSession().then(({data})=>{if(initialRevision===revision)load(data.session?.user??null);}).catch(()=>{if(initialRevision===revision)load(null);});
 })();
@@ -1996,6 +2016,7 @@ const CLOUD_URL='https://pkdkzkeqzpmglthbilyl.supabase.co',CLOUD_KEY='sb_publish
 })();
 
 </script></body></html>
+
 
 
 
