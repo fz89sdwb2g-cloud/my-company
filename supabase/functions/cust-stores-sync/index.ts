@@ -7,7 +7,7 @@ Deno.serve(async (req) => {
     if(!base||!key)throw Error("SYNC_DATABASE_CONFIG_MISSING");
     const headers={apikey:key,Authorization:"Bearer "+key,"Content-Type":"application/json"};
     if(asOf){
-      const payload={...values,user_id:"5736ec73-12eb-4b2b-83e7-5b0b741e47fa",location_id:"loc-01",location_name:"Магазин (спільна локація КУСТ)",sync_interval_minutes:1440};
+      const payload={...values,user_id:"5736ec73-12eb-4b2b-83e7-5b0b741e47fa",location_id:"loc-01",location_name:"Магазин (спільна локація КУСТ)",sync_interval_minutes:10080};
       const r=await fetch(base+"/rest/v1/rpc/save_cust_store_inventory",{method:"POST",redirect:"error",headers,body:JSON.stringify({payload}),signal:AbortSignal.timeout(15000)});
       if(!r.ok){await r.body?.cancel();throw Error("SYNC_DATABASE_WRITE_FAILED");}
       if(await r.json()!==true)throw Error("SYNC_STALE_OR_MISSING_ROW");
