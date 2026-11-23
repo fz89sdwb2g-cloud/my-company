@@ -1,5 +1,6 @@
 Deno.serve(async (req) => {
   let syncAuthorized = false;
+  let phase='LOGIN';
   const attemptedAt = new Date().toISOString();
   async function patchSnapshot(values, asOf=null) {
     const base=Deno.env.get("SUPABASE_URL"),key=Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
@@ -104,6 +105,7 @@ const password = Deno.env.get("CUST_API_PASSWORD")?.replace(/[\r\n]+$/, "");
     // loc-01 is fixed and validated on every inventory row.
     // Do not block inventory on an unrelated locations endpoint.
 
+phase='CLASSIFICATION';
 const definitions=new Map();
 {
  const base=Deno.env.get("SUPABASE_URL"),key=Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
@@ -161,6 +163,7 @@ do {
     headers:{Authorization:`Bearer ${token}`,Accept:"application/json"},
     signal:AbortSignal.timeout(15000)
   });
+  phase='INVENTORY';
   let r = await request();
   if (r.status === 401) {
     await r.body?.cancel();
@@ -217,6 +220,7 @@ const total = (Number(cents)/100).toFixed(2);
 const importedAt = new Date().toISOString();
 const valuationDetails={method:"reviewed_product_classification_v1",catalogue_count:catalogueCount,catalogue_stock_cost:decimal(catalogueCents),excluded_count:excludedCount,excluded_stock_cost:decimal(excludedCents),unclassified_count:unclassifiedCount,unclassified_stock_cost:decimal(unclassifiedCents),excluded_kinds:excludedKinds,unclassified_items:unclassifiedItems};
 if(cents+excludedCents+unclassifiedCents!==catalogueCents||count+excludedCount+unclassifiedCount!==catalogueCount)throw Error("CLASSIFICATION_RECONCILIATION_FAILED");
+phase='SAVE';
 await patchSnapshot({
   stock_cost:total,currency:"UAH",product_count:count,
   negative_quantity_count:negative,snapshot_id:snapshot,as_of:asOf,
@@ -230,7 +234,7 @@ return reply(200,{
 });
   } catch (error) {
     const allowed = ["CLASSIFICATION_READ_FAILED","CLASSIFICATION_MISSING","CLASSIFICATION_RECONCILIATION_FAILED","INVALID_MONEY","LOGIN_RETRY_FAILED","INVALID_TOKEN","INCOMPLETE_LIMIT","UNKNOWN_PAGINATION","MISSING_SNAPSHOT","SNAPSHOT_CHANGED","LOCATION_OR_CURRENCY_MISMATCH","DUPLICATE_PRODUCT","INVALID_QUANTITY_OR_COST","LINE_COST_MISMATCH","INVALID_CURSOR","REPEATED_CURSOR","SYNC_DATABASE_CONFIG_MISSING","SYNC_DATABASE_WRITE_FAILED","SYNC_STALE_OR_MISSING_ROW","EMPTY_INVENTORY_REVIEW_REQUIRED","INVALID_SNAPSHOT_DATE"];
-    return reply(502, {ok:false,code:allowed.includes(error?.message)?error.message:"CUST_CONNECTION_OR_FORMAT_ERROR"});
+    return reply(502, {ok:false,code:allowed.includes(error?.message)?error.message:"CUST_"+phase+"_FAILED", failure_reason:/redirect/i.test(String(error?.message))?"REDIRECT":/cert|tls|ssl/i.test(String(error?.message))?"TLS":/dns|resolve/i.test(String(error?.message))?"DNS":/connect|network|sending request|reset|closed/i.test(String(error?.message))?"NETWORK":"UNKNOWN", error_kind:["SyntaxError","TypeError","TimeoutError","AbortError","ReferenceError"].includes(error?.name)?error.name:"Error"});
   }
 });
 
