@@ -101,43 +101,8 @@ const password = Deno.env.get("CUST_API_PASSWORD")?.replace(/[\r\n]+$/, "");
       });
     }
 
-    const locationsResponse = await fetch(
-  "https://svi.ber.te.ua/cust/servise/api/v1/locations",
-  {
-    method: "GET",
-    redirect: "error",
-    headers: {
-      Authorization: `Bearer ${token}`,
-      Accept: "application/json"
-    },
-    signal: AbortSignal.timeout(15000)
-  }
-);
-
-if (!locationsResponse.ok) {
-  await locationsResponse.body?.cancel();
-  return reply(502, {
-    ok: false,
-    code: "CUST_LOCATIONS_HTTP_ERROR",
-    upstream_status: locationsResponse.status
-  });
-}
-
-const payload = await locationsResponse.json();
-const locations = [
-  payload,
-  payload?.locations,
-  payload?.data,
-  payload?.data?.locations
-].find(Array.isArray);
-
-if (!locations) {
-  return reply(502, {
-    ok: false,
-    code: "CUST_LOCATIONS_FORMAT_UNKNOWN"
-  });
-}
-
+    // loc-01 is fixed and validated on every inventory row.
+    // Do not block inventory on an unrelated locations endpoint.
 
 const definitions=new Map();
 {
@@ -268,3 +233,4 @@ return reply(200,{
     return reply(502, {ok:false,code:allowed.includes(error?.message)?error.message:"CUST_CONNECTION_OR_FORMAT_ERROR"});
   }
 });
+
